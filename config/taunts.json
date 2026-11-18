@@ -1,0 +1,868 @@
+{
+  "_readme": "What enemies say when the player stands around or backs off. Edit freely: every list is picked from at random. Lines wrapped in *asterisks* are silent gestures (used by the Mime). Voices: f = pitch in Hz, type = sine | square | sawtooth | triangle; null = silent.",
+  "idle": [
+    "Are you a coward?",
+    "Too chicken?",
+    "Too scared?",
+    "Come get some!",
+    "Hello?? Anyone home?",
+    "I don't have all day.",
+    "Your slap hand tired?",
+    "Scared of a little slap?",
+    "Tick tock, slappy.",
+    "Is that all you've got?",
+    "Need a hug first?",
+    "We can see you, you know.",
+    "Lost your nerve?",
+    "My grandma slaps faster.",
+    "Take your time. Coward.",
+    "What are you waiting for?"
+  ],
+  "retreat": [
+    "Run, chicken, run!",
+    "Where ya going?",
+    "Come back here!",
+    "That's right, walk away.",
+    "Leaving so soon?",
+    "Wrong way, hero!",
+    "Look at him go!",
+    "Back to mommy!"
+  ],
+  "lowHp": [
+    "One more and you're done!",
+    "Looking wobbly!",
+    "Does it hurt? Good.",
+    "Your face is very red.",
+    "Almost bedtime!"
+  ],
+  "chicken": [
+    "BAWK BAWK BAWK!",
+    "Bawk! Bawk-bawk!",
+    "Cluck cluck, chicken!",
+    "B'GAWK!",
+    "Here, chicky chicky!"
+  ],
+  "laugh": [
+    "HA HA HA!",
+    "Pfffft!",
+    "LOL.",
+    "Hee hee hee!",
+    "Bahaha!"
+  ],
+  "fear": [
+    "Uh oh.",
+    "Wait, wait...",
+    "I was joking!",
+    "Not the face!",
+    "He heard that?!",
+    "Gulp."
+  ],
+  "chant": [
+    "CHI-",
+    "CKEN!"
+  ],
+  "screams": {
+    "_readme": "Words shown with each kind of scream. The sounds themselves are in src/audio.js (SCREAMS).",
+    "aah": [
+      "AAAAAH!",
+      "YEEOWCH!",
+      "OWWWW!"
+    ],
+    "long": [
+      "AAAAAAAAAH!",
+      "NOT AGAAAIN!"
+    ],
+    "nooo": [
+      "NOOOO!",
+      "WHYYYY?!",
+      "NOT THE FAAACE!"
+    ],
+    "wah": [
+      "WAAAH!",
+      "MOMMYYY!",
+      "IT HUUURTS!"
+    ],
+    "yelp": [
+      "YIPE!",
+      "OW! OW!",
+      "EEP!"
+    ],
+    "eek": [
+      "EEEEEK!",
+      "YEEEEE!"
+    ],
+    "oof": [
+      "OOF!",
+      "UGH!",
+      "HNNGH!"
+    ],
+    "holler": [
+      "WAH-HA-HOOO!",
+      "YODEL-AY-EEE!"
+    ],
+    "fall": [
+      "aaaaaaaah...",
+      "I'll be baaaack..."
+    ],
+    "stutter": [
+      "A-A-A-AAAH!",
+      "B-B-BUT WHYYY!"
+    ]
+  },
+  "avenge": [
+    "That's family!",
+    "Oh, it's ON now.",
+    "Big mistake.",
+    "You're gonna pay for that."
+  ],
+  "tier3Banner": "COWARD?!",
+  "byType": {
+    "hater": [
+      "Boooo!",
+      "You suck!",
+      "0 out of 10. Would not slap.",
+      "Unfollowed.",
+      "Ratio."
+    ],
+    "suit": [
+      "Time is money, coward.",
+      "My lawyer hits harder.",
+      "I'll pencil in your beating.",
+      "Per my last slap..."
+    ],
+    "runner": [
+      "No hype. No guts.",
+      "Scared money don't make money!",
+      "You're mid, bro.",
+      "Catch me? You can't even move!"
+    ],
+    "bouncer": [
+      "You're not on the list.",
+      "Come here, tiny.",
+      "I eat slaps for breakfast.",
+      "Is the little guy lost?"
+    ],
+    "picketer": [
+      "NO GUTS! NO GLORY!",
+      "What do we want? A FIGHT!",
+      "Hey hey! Ho ho! This coward's got to go!"
+    ],
+    "tagger": [
+      "Hold still, canvas.",
+      "I'll paint you yellow!",
+      "You'd look good in a wall."
+    ],
+    "mime": [
+      "*mimes a chicken*",
+      "*yawns very loudly, silently*",
+      "*pretends to cry*",
+      "*checks invisible watch*",
+      "*is trapped in a box of boredom*"
+    ],
+    "doll": [
+      "Even my smallest one is braver.",
+      "Come to mama.",
+      "There's more of me than courage in you."
+    ],
+    "mini": [
+      "Fight me!",
+      "I'm tiny and YOU'RE scared?",
+      "Pick on someone my size!"
+    ],
+    "bucket": [
+      "Who turned off the lights?",
+      "Is he gone? Is he scared?",
+      "I can't see you hiding!",
+      "I can smell fear. And paint."
+    ],
+    "og": [
+      "You lost, little man?",
+      "Wrong block.",
+      "Go on. Take your shot.",
+      "I'll wait.",
+      "Swing first. I dare you.",
+      "We got all day."
+    ],
+    "twin": [
+      "Us two? Since day one.",
+      "Two of us. One of you.",
+      "We got each other's backs.",
+      "You can't drop us both."
+    ],
+    "slugger": [
+      "Batter up.",
+      "Step into the box.",
+      "I swing for the fences.",
+      "Come get your strike."
+    ],
+    "oldschool": [
+      "Slow down, youngster.",
+      "We did it better in my day.",
+      "Mind the shoes.",
+      "One-two. Remember that."
+    ],
+    "stripes": [
+      "I got people.",
+      "One whistle. That's all it takes.",
+      "You want me? Get in line.",
+      "The whole block's on speed dial."
+    ],
+    "grip": [
+      "C'mere!",
+      "Where you going?",
+      "Hold still a sec.",
+      "Gotcha... almost."
+    ],
+    "hoops": [
+      "Heads up!",
+      "Catch.",
+      "These were expensive.",
+      "Don't make me take off the other one."
+    ],
+    "topdog": [
+      "This is my boulevard.",
+      "Nobody gets past the Top Dog.",
+      "You call that a slap?"
+    ],
+    "landlord": [
+      "Rent's due, coward.",
+      "I'll raise your rent AND your fear.",
+      "Evicted from your own courage."
+    ],
+    "critic": [
+      "Derivative. Timid. Boring.",
+      "Two stars. No courage.",
+      "I've seen braver wallpaper."
+    ],
+    "inspector": [
+      "No ticket, no mercy.",
+      "This is a penalty face.",
+      "Stand BEHIND the yellow line.",
+      "You are delaying the service."
+    ],
+    "hothead": [
+      "Feeling the heat yet?",
+      "I was born in that crater.",
+      "Stand still. Melt quicker.",
+      "Hot enough for you?"
+    ],
+    "farmer": [
+      "I have wrestled bulls, boy.",
+      "Git off my road.",
+      "That all the city taught you?",
+      "My scarecrow hits harder."
+    ],
+    "farmhand": [
+      "Git off the land!",
+      "This fork is not for hay.",
+      "City hands. Soft.",
+      "You are trespassing, friend."
+    ],
+    "rancher": [
+      "Not my first rodeo.",
+      "I have roped meaner calves.",
+      "Round him up!",
+      "You slap like a show pony."
+    ],
+    "biker": [
+      "No brakes, no fear!",
+      "Out of my lane, old man!",
+      "Watch this wheelie!",
+      "I'm telling my mom!",
+      "Last one to school is YOU."
+    ],
+    "scooter": [
+      "Beep beep, grandpa!",
+      "Zero emissions, all attitude!",
+      "Battery full. You? Not so much.",
+      "Twenty-five an hour, baby!",
+      "Rented it with my mom's card!"
+    ],
+    "skater": [
+      "Skating is not a crime!",
+      "This is OUR station.",
+      "Nice face. Shame about it.",
+      "Kickflip to your jaw!",
+      "Security can't catch us!"
+    ],
+    "busker": [
+      "Requests are a fiver.",
+      "This one is called \"Your Face\".",
+      "Wonderwall? Again?!",
+      "Tip the artist. With your teeth."
+    ],
+    "bboy": [
+      "Cypher is closed!",
+      "Step in the circle, step in the hurt.",
+      "Windmill to the jaw!",
+      "Battle me, old timer!"
+    ],
+    "potato": [
+      "Shh. My show's on.",
+      "Move. You're blocking the TV.",
+      "I'm not getting up for you.",
+      "Five more minutes...",
+      "Did you bring snacks?"
+    ],
+    "grilldad": [
+      "How do you like 'em? WELL DONE!",
+      "Order up!",
+      "Hot off the grill!",
+      "Medium rare, coming in hot!",
+      "Who wants seconds?"
+    ],
+    "auntie": [
+      "Don't make me take off the other one.",
+      "Look at the STATE of you!",
+      "Shoes OFF in this house!",
+      "You call that a slap?",
+      "Here comes the chancla!"
+    ],
+    "houseguest": [
+      "Mi casa es MI casa.",
+      "I'm not leaving. I've got a bathrobe.",
+      "Rent? In this economy?",
+      "I live here now. Deal with it.",
+      "Who left all these toys out? Oh, me."
+    ],
+    "clown": [
+      "Honk honk!",
+      "Pie's on me!",
+      "Why so serious?",
+      "You've got something on your face. PIE.",
+      "Smile! It's the circus!"
+    ],
+    "juggler": [
+      "Catch!",
+      "Keep your eye on the pins!",
+      "Three in the air, one for you!",
+      "I can do this all night."
+    ],
+    "strongman": [
+      "I lift. You fall.",
+      "Feel these guns!",
+      "Two hundred kilos, one hand.",
+      "Come closer, little man."
+    ],
+    "acrobat": [
+      "Too slow!",
+      "Ta-daa!",
+      "Catch me if you can!",
+      "Over here! No, over HERE!"
+    ],
+    "ringmaster": [
+      "The show must go on!",
+      "Step right up!",
+      "A round of applause for the loser!",
+      "Whip-crack, away!",
+      "Bring in the clowns!"
+    ],
+    "mallcop": [
+      "Freeze! Mall security!",
+      "Sir, I'm gonna need you to leave.",
+      "I'm not a real cop, but I AM real angry.",
+      "Unit 2, we have a slapper!",
+      "Do NOT make me get off this thing."
+    ],
+    "kiosk": [
+      "Excuse me! Can I ask you a question?",
+      "Free sample! Hold still!",
+      "Your hands look DRY.",
+      "Dead Sea minerals, my friend!",
+      "Just one minute of your time!"
+    ],
+    "walker": [
+      "On your left!",
+      "Ten thousand steps, baby!",
+      "Out of the way, sonny!",
+      "Laps before lunch!",
+      "Keep up!"
+    ],
+    "shopaholic": [
+      "Watch the bags!",
+      "These were ON SALE.",
+      "Do you KNOW how long the queue was?",
+      "Not the bags!",
+      "Retail therapy, honey."
+    ],
+    "mannequin": [
+      "...",
+      "*creak*",
+      "(perfectly still)",
+      "*plastic noises*"
+    ],
+    "manager": [
+      "That's a violation!",
+      "You're on thin ice, sir!",
+      "I will escalate this!",
+      "Policy is policy!",
+      "Security! SECURITY!"
+    ],
+    "senator": [
+      "Point of order!",
+      "Let me be perfectly clear...",
+      "My esteemed colleague is a COWARD.",
+      "I'll filibuster you into next year!",
+      "I yield my time to... no, I don't."
+    ],
+    "judge": [
+      "Order in the street!",
+      "Guilty! Of being slow!",
+      "Overruled!",
+      "Contempt of court!",
+      "I sentence you to... a slap!"
+    ],
+    "lobbyist": [
+      "Everybody has a price.",
+      "My clients would like a word.",
+      "This briefcase? Totally legal.",
+      "I don't make the laws. I buy them.",
+      "Let's do lunch. Forever."
+    ],
+    "intern": [
+      "Coffee! Coming through!",
+      "I'm not even paid for this!",
+      "Is this a networking event?",
+      "Extra shot? EXTRA SHOT?",
+      "My boss is gonna kill me!"
+    ],
+    "agent": [
+      "Target acquired.",
+      "Step away from the street.",
+      "Copy that. Engaging.",
+      "The eagle is in the nest.",
+      "Code red. Code red."
+    ],
+    "spin": [
+      "That slap was fake news.",
+      "We'll circle back.",
+      "You're taking that out of context!",
+      "Let me rephrase that.",
+      "Alternative slaps!"
+    ],
+    "bureaucrat": [
+      "Take a number.",
+      "Wrong form.",
+      "Come back Tuesday.",
+      "Denied. Denied. DENIED.",
+      "Fill it out in triplicate!"
+    ],
+    "overruler": [
+      "ORDER!",
+      "Overruled!",
+      "Objection denied!",
+      "Guilty on all counts!",
+      "This court finds you... SLAPPABLE!"
+    ],
+    "candidate": [
+      "Can I count on your vote?",
+      "Vote for me! I'll ban slapping TWICE!",
+      "Let me shake that hand. ...Forever.",
+      "I approve this message.",
+      "Read my lips: no new slaps!",
+      "Have you considered... me?",
+      "Four more years! Of me!",
+      "Kiss a baby? Slap a voter? Same thing."
+    ],
+    "canvasser": [
+      "Got a minute for democracy?",
+      "Have you registered to vote... for HIM?",
+      "Take a leaflet! Take TEN!",
+      "Sign here, here and here.",
+      "Quick survey: are you scared?",
+      "He's got a plan! It's a secret!"
+    ],
+    "thief": [
+      "Nice pockets. Shame if someone emptied them.",
+      "I'm one of forty. The other thirty-nine are behind you.",
+      "Open sesame? Open WALLET.",
+      "Finders keepers!",
+      "I only steal from people I can catch."
+    ],
+    "tycoon": [
+      "Do you take cash? Here. CATCH.",
+      "I could buy this street. I did, actually.",
+      "Money can't buy slaps. It can throw, though.",
+      "Keep the change!",
+      "That's coming out of YOUR pocket."
+    ],
+    "spicer": [
+      "Paprika? Cumin? A FACE full of both?",
+      "Best spice in the bazaar! Free sample!",
+      "Too spicy for you?",
+      "A pinch of this, a pinch of YOU.",
+      "Sneeze on your own time!"
+    ],
+    "charmer": [
+      "Say hello to Kevin. Kevin bites.",
+      "He only dances when I play. You'll dance too.",
+      "Don't worry, he's mostly rope.",
+      "Hisssss. That was me, actually.",
+      "Catch!"
+    ],
+    "rider": [
+      "No licence, no brakes, no problem!",
+      "Coming through! Mind the fringe!",
+      "It's a carpet. It flies. Keep up!",
+      "Low bridge! Just kidding, it's you!",
+      "First class only!"
+    ],
+    "haggler": [
+      "For you, my friend, special price!",
+      "Hand-knotted! Slap-proof! Nearly!",
+      "A hundred. Ninety. Fine, EIGHTY.",
+      "Feel that weave. No, with your FACE.",
+      "You break it, you bought it!"
+    ],
+    "guard": [
+      "Halt, in the name of the Sultan!",
+      "Nobody slaps past me. Nobody.",
+      "This fan is for cooling tempers.",
+      "Papers. Slaps. In that order.",
+      "You are disturbing the peacocks."
+    ],
+    "genie": [
+      "Three wishes! All mine!",
+      "I've been in that lamp for a thousand years. I'm TENSE.",
+      "You rubbed me the wrong way.",
+      "Poof! Miss me?",
+      "Wish granted: you lose."
+    ],
+    "boarder": [
+      "Skiers, bro. So many edges.",
+      "You're in my line!",
+      "Shred it or forget it!",
+      "Nice pizza. Now try french fries.",
+      "Park's closed. To you."
+    ],
+    "snowballer": [
+      "Think fast!",
+      "Free samples! They're cold!",
+      "Yellow snow? Never touch it. Here's white.",
+      "Incoming!",
+      "It's just weather! Aimed weather!"
+    ],
+    "instructor": [
+      "Bend ze knees!",
+      "Pizza! PIZZA! Why is nobody doing pizza?!",
+      "Class! Observe a bad example.",
+      "That is NOT how we stop.",
+      "Lesson one: falling over. Allow me."
+    ],
+    "skikid": [
+      "Pizza!",
+      "French fries!",
+      "I'm telling!",
+      "Wheeee!",
+      "My mittens are on a string!"
+    ],
+    "patrol": [
+      "Slow zone! SLOW! ZONE!",
+      "I'm going to need to clip your pass.",
+      "No slapping above the tree line.",
+      "Sir. SIR. That is a closed run.",
+      "This is a rescue. You're being rescued. Hold still."
+    ],
+    "apres": [
+      "I did one run in 2009.",
+      "You look tense. Have some cheese.",
+      "The slopes? No, I just like the hat.",
+      "Mulled wine is a food group.",
+      "Catch! It's hot!"
+    ],
+    "skibro": [
+      "Sick. Gnarly. Other words.",
+      "I've got first tracks, bro.",
+      "These are 210s. You wouldn't understand.",
+      "No friends on a powder day.",
+      "Dude. DUDE. Dude."
+    ]
+  },
+  "voices": {
+    "hater": {
+      "f": 230,
+      "type": "square"
+    },
+    "suit": {
+      "f": 150,
+      "type": "sawtooth"
+    },
+    "runner": {
+      "f": 340,
+      "type": "square"
+    },
+    "bouncer": {
+      "f": 85,
+      "type": "sawtooth"
+    },
+    "picketer": {
+      "f": 200,
+      "type": "square"
+    },
+    "tagger": {
+      "f": 260,
+      "type": "sine"
+    },
+    "mime": null,
+    "doll": {
+      "f": 300,
+      "type": "triangle"
+    },
+    "mini": {
+      "f": 560,
+      "type": "triangle"
+    },
+    "bucket": {
+      "f": 170,
+      "type": "sine"
+    },
+    "og": {
+      "f": 125,
+      "type": "triangle"
+    },
+    "twin": {
+      "f": 180,
+      "type": "triangle"
+    },
+    "slugger": {
+      "f": 105,
+      "type": "sawtooth"
+    },
+    "oldschool": {
+      "f": 95,
+      "type": "triangle"
+    },
+    "stripes": {
+      "f": 75,
+      "type": "triangle"
+    },
+    "grip": {
+      "f": 280,
+      "type": "square"
+    },
+    "hoops": {
+      "f": 420,
+      "type": "triangle"
+    },
+    "topdog": {
+      "f": 65,
+      "type": "sawtooth"
+    },
+    "landlord": {
+      "f": 70,
+      "type": "sawtooth"
+    },
+    "critic": {
+      "f": 110,
+      "type": "triangle"
+    },
+    "inspector": {
+      "f": 110,
+      "type": "triangle"
+    },
+    "hothead": {
+      "f": 62,
+      "type": "sawtooth"
+    },
+    "farmer": {
+      "f": 70,
+      "type": "sawtooth"
+    },
+    "farmhand": {
+      "f": 105,
+      "type": "sawtooth"
+    },
+    "rancher": {
+      "f": 95,
+      "type": "triangle"
+    },
+    "biker": {
+      "f": 380,
+      "type": "square"
+    },
+    "scooter": {
+      "f": 420,
+      "type": "sawtooth"
+    },
+    "skater": {
+      "f": 330,
+      "type": "square"
+    },
+    "busker": {
+      "f": 180,
+      "type": "sawtooth"
+    },
+    "bboy": {
+      "f": 260,
+      "type": "square"
+    },
+    "potato": {
+      "f": 95,
+      "type": "sawtooth"
+    },
+    "grilldad": {
+      "f": 120,
+      "type": "square"
+    },
+    "auntie": {
+      "f": 360,
+      "type": "triangle"
+    },
+    "houseguest": {
+      "f": 72,
+      "type": "sawtooth"
+    },
+    "clown": {
+      "f": 330,
+      "type": "square"
+    },
+    "juggler": {
+      "f": 260,
+      "type": "triangle"
+    },
+    "strongman": {
+      "f": 85,
+      "type": "sawtooth"
+    },
+    "acrobat": {
+      "f": 380,
+      "type": "triangle"
+    },
+    "ringmaster": {
+      "f": 110,
+      "type": "sawtooth"
+    },
+    "mallcop": {
+      "f": 150,
+      "type": "square"
+    },
+    "kiosk": {
+      "f": 240,
+      "type": "sawtooth"
+    },
+    "walker": {
+      "f": 300,
+      "type": "triangle"
+    },
+    "shopaholic": {
+      "f": 340,
+      "type": "square"
+    },
+    "mannequin": {
+      "f": 60,
+      "type": "sine"
+    },
+    "manager": {
+      "f": 95,
+      "type": "sawtooth"
+    },
+    "senator": {
+      "f": 120,
+      "type": "sawtooth"
+    },
+    "judge": {
+      "f": 105,
+      "type": "sawtooth"
+    },
+    "lobbyist": {
+      "f": 160,
+      "type": "square"
+    },
+    "intern": {
+      "f": 330,
+      "type": "square"
+    },
+    "agent": {
+      "f": 88,
+      "type": "sawtooth"
+    },
+    "spin": {
+      "f": 210,
+      "type": "triangle"
+    },
+    "bureaucrat": {
+      "f": 140,
+      "type": "triangle"
+    },
+    "overruler": {
+      "f": 70,
+      "type": "sawtooth"
+    },
+    "candidate": {
+      "f": 165,
+      "type": "sawtooth"
+    },
+    "canvasser": {
+      "f": 270,
+      "type": "triangle"
+    },
+    "thief": {
+      "f": 300,
+      "type": "triangle"
+    },
+    "tycoon": {
+      "f": 150,
+      "type": "sawtooth"
+    },
+    "spicer": {
+      "f": 200,
+      "type": "triangle"
+    },
+    "charmer": {
+      "f": 240,
+      "type": "square"
+    },
+    "rider": {
+      "f": 280,
+      "type": "triangle"
+    },
+    "haggler": {
+      "f": 170,
+      "type": "sawtooth"
+    },
+    "guard": {
+      "f": 95,
+      "type": "sawtooth"
+    },
+    "genie": {
+      "f": 120,
+      "type": "square"
+    },
+    "sultan": {
+      "f": 80,
+      "type": "sawtooth"
+    },
+    "boarder": {
+      "f": 230,
+      "type": "triangle"
+    },
+    "snowballer": {
+      "f": 290,
+      "type": "triangle"
+    },
+    "instructor": {
+      "f": 160,
+      "type": "sawtooth"
+    },
+    "skikid": {
+      "f": 420,
+      "type": "triangle"
+    },
+    "patrol": {
+      "f": 130,
+      "type": "sawtooth"
+    },
+    "apres": {
+      "f": 185,
+      "type": "triangle"
+    },
+    "skibro": {
+      "f": 110,
+      "type": "sawtooth"
+    },
+    "yeti": {
+      "f": 60,
+      "type": "sawtooth"
+    }
+  }
+}

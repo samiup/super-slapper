@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#111111" />
+  <title>Super Slapper Max Pro Ultra</title>
+  <meta name="description" content="Slap your way down the street. One thumb, twelve levels, a boss at the end of each. Free, no ads, nothing collected." />
+  <!-- the web build: installable to a home screen, playable offline (public/manifest.webmanifest, public/sw.js) -->
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="icons/favicon.png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Slapper" />
+  <meta property="og:title" content="Super Slapper Max Pro Ultra" />
+  <meta property="og:description" content="Slap your way down the street. One thumb, twelve levels, a boss at the end of each." />
+  <meta property="og:image" content="icons/icon-512.png" />
+  <meta property="og:type" content="website" />
+  <script type="module" crossorigin src="./assets/index-BPJHIYVi.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DbVSSybS.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="c"></canvas>
+    <div id="speedlines"></div>
+    <div id="vignette"></div>
+    <div id="fxlayer"></div>
+
+    <div id="hud" class="hidden">
+      <div id="topbar">
+        <div id="hearts"></div>
+        <div id="score">0</div>
+        <button id="pauseBtn" aria-label="Pause">II</button>
+      </div>
+      <div id="progress"><div id="progressFill"></div><div id="progressEnd">☠</div></div>
+      <div id="power" class="hidden"><div id="powerFill"></div><span id="powerLabel"></span></div>
+      <div id="combo" class="hidden">
+        <div id="comboNum">0</div><div id="comboLabel">COMBO</div>
+        <div id="comboBar"><div id="comboFill"></div></div>
+        <div id="mult">x1</div>
+      </div>
+      <div id="bossbar" class="hidden"><div id="bossName"></div><div class="bar"><div id="bossFill"></div></div></div>
+      <div id="banner"></div>
+      <div id="hint" class="hidden"><div class="thumb">☝</div>PUSH UP TO ADVANCE<br /><small>pull back to retreat · slide to aim and dodge</small></div>
+    </div>
+
+    <div id="menu" class="screen">
+      <div class="title">
+        <div class="t0">SUPER</div>
+        <div class="t1">SLAPPER</div>
+        <div class="t2"><span>MAX</span><span>PRO</span><span>ULTRA</span></div>
+      </div>
+      <button id="bFaces" class="sticker" aria-label="Put a face on the enemy"></button>
+      <div id="levels"></div>
+      <div class="toggles">
+        <button id="tSound" class="chip"></button>
+        <button id="tMusic" class="chip"></button>
+        <button id="tHaptics" class="chip"></button>
+      </div>
+      <div id="version"></div>
+      <a id="bPrivacy" href="privacy.html">PRIVACY POLICY</a>
+    </div>
+
+    <div id="faces" class="screen hidden" data-state="empty">
+      <div id="fBooth">
+        <img id="fPhoto" alt="" />
+        <div class="guide"><i></i><span>ONE FACE · LOOKING AT YOU · GOOD LIGHT</span></div>
+        <div class="scan"></div>
+        <div id="fStamp"></div>
+        <div class="taphint">TAP TO TEST-SLAP</div>
+      </div>
+      <div id="fRoster" class="hidden"></div>
+      <button id="fClose" aria-label="Back">✕</button>
+      <h2 class="ftitle">MAKE AN ENEMY</h2>
+      <div class="fmsg"><b id="fHead"></b><p id="fBody"></p></div>
+      <div id="fNameRow" class="hidden"><input id="fName" maxlength="10" placeholder="NAME THEM" autocomplete="off" autocapitalize="characters" spellcheck="false" enterkeyhint="done" /></div>
+      <div id="fGender" class="hidden"><button data-g="m" class="chip">MALE</button><button data-g="f" class="chip">FEMALE</button><button data-g="any" class="chip">DOESN'T MATTER</button></div>
+      <div id="fActions"></div>
+      <p class="fine">Checked right here on this device. The game never sends the photo anywhere.<br />Only use people who are in on the joke. <a id="fPrivacy" href="privacy.html">Privacy policy</a></p>
+      <input type="file" id="fPick" accept="image/*" hidden />
+      <input type="file" id="fShoot" accept="image/*" capture="environment" hidden />
+    </div>
+
+    <div id="pause" class="screen hidden">
+      <div class="panel">
+        <h2>PAUSED</h2>
+        <button id="bResume" class="btn">RESUME</button>
+        <button id="bRestart" class="btn alt">RESTART</button>
+        <button id="bQuit" class="btn alt">QUIT</button>
+      </div>
+    </div>
+
+    <div id="result" class="screen hidden">
+      <div class="panel">
+        <h2 id="rTitle"></h2>
+        <div id="rStars"></div>
+        <div id="rScore"></div>
+        <div id="rStats"></div>
+        <button id="bNext" class="btn">NEXT LEVEL</button>
+        <button id="bRetry" class="btn alt">RETRY</button>
+        <button id="bMenu" class="btn alt">MENU</button>
+      </div>
+    </div>
+
+    <div id="loading">LOADING…</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,613 @@
+{
+ "id": "level11",
+ "name": "1001 SLAPS",
+ "subtitle": "One thousand and one nights. One slap for each. Somebody is counting.",
+ "length": 640,
+ "runSpeedMult": 1.05,
+ "bpm": 104,
+ "rats": false,
+ "_music": "hijaz = a hand drum, a drone and a reedy tune in the Hijaz scale (audio.js startMusic). Leave it out for the usual beat.",
+ "music": "hijaz",
+ "_slapGoal": "This level keeps count: every slap ever landed on it (stat, kept with the badges) toward goal, shown in the corner of the screen. done = the banner when the count gets there.",
+ "slapGoal": {
+  "stat": "nightSlaps",
+  "goal": 1001,
+  "label": "SLAPS",
+  "done": "1001 SLAPS! THE END!"
+ },
+ "_path": "The lane winds: straight for start metres, then legs of about leg metres (vary = how much they differ) heading turn radians right and left in turn, joined by curves of radius metres, then straight again from end (the Sultan's court). Keep scenery within radius metres of the middle.",
+ "path": {
+  "start": 44,
+  "leg": 40,
+  "vary": 0.35,
+  "turn": 0.4,
+  "radius": 38,
+  "end": 560
+ },
+ "_rooms": "The districts, in order (arabia.js builds each in its own manner; the name swings down on a sign as the player walks in). kind: bazaar | jars | oil | garden | court.",
+ "rooms": [
+  {
+   "z": 0,
+   "kind": "bazaar",
+   "name": "THE NIGHT BAZAAR",
+   "note": "Everything is for sale. Especially you."
+  },
+  {
+   "z": 140,
+   "kind": "jars",
+   "name": "ALLEY OF FORTY JARS",
+   "note": "Thirty-nine are empty. Probably."
+  },
+  {
+   "z": 270,
+   "kind": "oil",
+   "name": "BLACK GOLD ROW",
+   "note": "Mind the crude."
+  },
+  {
+   "z": 410,
+   "kind": "garden",
+   "name": "THE PALACE GARDENS",
+   "note": "Keep off the peacocks."
+  },
+  {
+   "z": 566,
+   "kind": "court",
+   "name": "THE SULTAN'S COURT",
+   "note": "He has been expecting a slap."
+  }
+ ],
+ "_hazards": "On the road. oil = a patch of crude oil: slippery like a wet floor (slap someone standing in it and they skid away and bowl over whoever is behind; your own feet skate too). z = metres along, len = how long, x0..x1 = how far across (-1..1).",
+ "hazards": [
+  {
+   "kind": "oil",
+   "z": 78,
+   "len": 6,
+   "x0": -0.5,
+   "x1": 0.4
+  },
+  {
+   "kind": "oil",
+   "z": 172,
+   "len": 5,
+   "x0": 0.1,
+   "x1": 1
+  },
+  {
+   "kind": "oil",
+   "z": 220,
+   "len": 6,
+   "x0": -1,
+   "x1": -0.1
+  },
+  {
+   "kind": "oil",
+   "z": 282,
+   "len": 8,
+   "x0": -1,
+   "x1": 0.2
+  },
+  {
+   "kind": "oil",
+   "z": 300,
+   "len": 7,
+   "x0": 0,
+   "x1": 1
+  },
+  {
+   "kind": "oil",
+   "z": 318,
+   "len": 9,
+   "x0": -0.6,
+   "x1": 0.6
+  },
+  {
+   "kind": "oil",
+   "z": 340,
+   "len": 7,
+   "x0": -1,
+   "x1": -0.1
+  },
+  {
+   "kind": "oil",
+   "z": 356,
+   "len": 8,
+   "x0": 0.1,
+   "x1": 1
+  },
+  {
+   "kind": "oil",
+   "z": 376,
+   "len": 10,
+   "x0": -0.7,
+   "x1": 0.5
+  },
+  {
+   "kind": "oil",
+   "z": 396,
+   "len": 6,
+   "x0": 0,
+   "x1": 1
+  },
+  {
+   "kind": "oil",
+   "z": 448,
+   "len": 6,
+   "x0": -0.5,
+   "x1": 0.5
+  },
+  {
+   "kind": "oil",
+   "z": 498,
+   "len": 7,
+   "x0": -1,
+   "x1": 0
+  },
+  {
+   "kind": "oil",
+   "z": 528,
+   "len": 6,
+   "x0": 0.2,
+   "x1": 1
+  }
+ ],
+ "theme": {
+  "night": true,
+  "style": "arabia",
+  "manholes": false,
+  "noSun": false,
+  "skyTop": "#0b1240",
+  "skyBottom": "#4a2a7a",
+  "fog": "#3a2a66",
+  "fogNear": 55,
+  "fogFar": 165,
+  "road": "#b79a78",
+  "roadLine": "#f7efe0",
+  "sidewalk": "#d9bf94",
+  "curb": "#a8895e",
+  "sun": "#fff3c4",
+  "lawn": "#c9a56f",
+  "walls": [
+   "#e8cfa0",
+   "#dfc08a",
+   "#f0dcb4"
+  ],
+  "palette": [
+   "#c8102e",
+   "#ffd23f",
+   "#1fa8a0",
+   "#ff7b25",
+   "#7b2cbf",
+   "#f7efe0",
+   "#2f6fb5"
+  ],
+  "hemiSky": "#cfd4ff",
+  "hemiGround": "#b98a5a",
+  "hemiIntensity": 1.5,
+  "sunIntensity": 1.25,
+  "props": []
+ },
+ "_spawns": "A spawn with \"jar\": true waits in a great jar in the road and bursts out when the player is close (game.json jars).",
+ "spawns": [
+  {
+   "z": 14,
+   "type": "hater",
+   "x": 0.2,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 26,
+   "type": "spicer",
+   "x": 0.5
+  },
+  {
+   "z": 36,
+   "type": "thief",
+   "x": -0.4
+  },
+  {
+   "z": 44,
+   "type": "can",
+   "x": 0.7,
+   "formation": "column",
+   "count": 4
+  },
+  {
+   "z": 52,
+   "type": "haggler",
+   "x": 0
+  },
+  {
+   "z": 60,
+   "type": "tycoon",
+   "x": -0.6
+  },
+  {
+   "z": 70,
+   "type": "thief",
+   "x": 0,
+   "formation": "cluster",
+   "count": 3
+  },
+  {
+   "z": 82,
+   "type": "rider",
+   "x": 0.4
+  },
+  {
+   "z": 90,
+   "type": "heart",
+   "x": -0.6
+  },
+  {
+   "z": 96,
+   "type": "charmer",
+   "x": 0.5
+  },
+  {
+   "z": 104,
+   "type": "spicer",
+   "x": -0.5
+  },
+  {
+   "z": 112,
+   "type": "hater",
+   "x": 0,
+   "formation": "line",
+   "count": 3
+  },
+  {
+   "z": 120,
+   "type": "haggler",
+   "x": 0.3
+  },
+  {
+   "z": 128,
+   "type": "rider",
+   "x": -0.3,
+   "formation": "column",
+   "count": 2
+  },
+  {
+   "z": 134,
+   "type": "glove",
+   "x": 0
+  },
+  {
+   "z": 146,
+   "type": "thief",
+   "x": -0.5,
+   "jar": true
+  },
+  {
+   "z": 150,
+   "type": "thief",
+   "x": 0.5,
+   "jar": true
+  },
+  {
+   "z": 160,
+   "type": "charmer",
+   "x": 0.2
+  },
+  {
+   "z": 168,
+   "type": "thief",
+   "x": 0,
+   "jar": true
+  },
+  {
+   "z": 176,
+   "type": "tycoon",
+   "x": -0.5
+  },
+  {
+   "z": 184,
+   "type": "thief",
+   "x": -0.6,
+   "jar": true
+  },
+  {
+   "z": 188,
+   "type": "thief",
+   "x": 0.6,
+   "jar": true
+  },
+  {
+   "z": 192,
+   "type": "thief",
+   "x": 0,
+   "jar": true
+  },
+  {
+   "z": 198,
+   "type": "heart",
+   "x": 0.5
+  },
+  {
+   "z": 204,
+   "type": "haggler",
+   "x": -0.2
+  },
+  {
+   "z": 214,
+   "type": "genie",
+   "x": 0,
+   "scene": "elite_genie"
+  },
+  {
+   "z": 226,
+   "type": "thief",
+   "x": 0.4,
+   "jar": true
+  },
+  {
+   "z": 230,
+   "type": "thief",
+   "x": -0.4,
+   "jar": true
+  },
+  {
+   "z": 238,
+   "type": "spicer",
+   "x": 0.5
+  },
+  {
+   "z": 246,
+   "type": "rider",
+   "x": -0.4
+  },
+  {
+   "z": 252,
+   "type": "double",
+   "x": 0
+  },
+  {
+   "z": 258,
+   "type": "thief",
+   "x": 0,
+   "formation": "line",
+   "count": 3
+  },
+  {
+   "z": 264,
+   "type": "charmer",
+   "x": -0.5
+  },
+  {
+   "z": 278,
+   "type": "tycoon",
+   "x": 0.5
+  },
+  {
+   "z": 286,
+   "type": "guard",
+   "x": 0
+  },
+  {
+   "z": 296,
+   "type": "rider",
+   "x": 0,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 304,
+   "type": "can",
+   "x": -0.7,
+   "formation": "column",
+   "count": 4
+  },
+  {
+   "z": 310,
+   "type": "tycoon",
+   "x": -0.5
+  },
+  {
+   "z": 316,
+   "type": "spicer",
+   "x": 0.5
+  },
+  {
+   "z": 326,
+   "type": "thief",
+   "x": 0,
+   "formation": "cluster",
+   "count": 3
+  },
+  {
+   "z": 336,
+   "type": "haggler",
+   "x": 0.2
+  },
+  {
+   "z": 344,
+   "type": "guard",
+   "x": -0.3
+  },
+  {
+   "z": 352,
+   "type": "noodle",
+   "x": 0
+  },
+  {
+   "z": 358,
+   "type": "tycoon",
+   "x": 0,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 368,
+   "type": "rider",
+   "x": 0.5
+  },
+  {
+   "z": 372,
+   "type": "heart",
+   "x": -0.5
+  },
+  {
+   "z": 380,
+   "type": "charmer",
+   "x": 0.4
+  },
+  {
+   "z": 388,
+   "type": "genie",
+   "x": -0.2
+  },
+  {
+   "z": 400,
+   "type": "thief",
+   "x": 0.3,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 406,
+   "type": "tycoon",
+   "x": 0.5
+  },
+  {
+   "z": 414,
+   "type": "guard",
+   "x": 0.2
+  },
+  {
+   "z": 422,
+   "type": "charmer",
+   "x": -0.5
+  },
+  {
+   "z": 430,
+   "type": "spicer",
+   "x": 0.5
+  },
+  {
+   "z": 438,
+   "type": "smash",
+   "x": 0
+  },
+  {
+   "z": 444,
+   "type": "rider",
+   "x": 0.3,
+   "formation": "column",
+   "count": 2
+  },
+  {
+   "z": 452,
+   "type": "haggler",
+   "x": -0.3
+  },
+  {
+   "z": 458,
+   "type": "tycoon",
+   "x": 0.5
+  },
+  {
+   "z": 466,
+   "type": "thief",
+   "x": -0.5,
+   "jar": true
+  },
+  {
+   "z": 470,
+   "type": "thief",
+   "x": 0.5,
+   "jar": true
+  },
+  {
+   "z": 474,
+   "type": "spicer",
+   "x": 0.4
+  },
+  {
+   "z": 476,
+   "type": "hyper",
+   "x": 0
+  },
+  {
+   "z": 484,
+   "type": "guard",
+   "x": -0.2
+  },
+  {
+   "z": 492,
+   "type": "genie",
+   "x": 0.2
+  },
+  {
+   "z": 502,
+   "type": "spicer",
+   "x": -0.5
+  },
+  {
+   "z": 508,
+   "type": "heart",
+   "x": 0.5
+  },
+  {
+   "z": 514,
+   "type": "charmer",
+   "x": 0.5
+  },
+  {
+   "z": 520,
+   "type": "rider",
+   "x": -0.4
+  },
+  {
+   "z": 526,
+   "type": "haggler",
+   "x": 0.3
+  },
+  {
+   "z": 532,
+   "type": "guard",
+   "x": 0
+  },
+  {
+   "z": 536,
+   "type": "buddy",
+   "x": 0
+  },
+  {
+   "z": 542,
+   "type": "thief",
+   "x": 0,
+   "formation": "cluster",
+   "count": 3
+  },
+  {
+   "z": 546,
+   "type": "charmer",
+   "x": -0.5
+  },
+  {
+   "z": 550,
+   "type": "tycoon",
+   "x": -0.5
+  },
+  {
+   "z": 556,
+   "type": "back",
+   "x": 0
+  },
+  {
+   "z": 558,
+   "type": "guard",
+   "x": 0.2
+  },
+  {
+   "z": 572,
+   "type": "heart",
+   "x": 0.3
+  }
+ ],
+ "boss": {
+  "type": "sultan"
+ }
+}
