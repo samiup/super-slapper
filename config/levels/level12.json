@@ -1,0 +1,602 @@
+{
+ "id": "level12",
+ "name": "SLAPPERY SLOPE",
+ "subtitle": "Double black diamond. The only way is down, and everybody is in it.",
+ "length": 660,
+ "runSpeedMult": 1,
+ "bpm": 124,
+ "music": "polka",
+ "rats": false,
+ "_slope": "How steep the hill is: metres dropped for every metre travelled (bend.js). It is only how the level is drawn: the piste falls away in front of the player and the valley shows over the edge.",
+ "slope": 0.16,
+ "_ski": "The player is on skis. cruise: the speed he glides at with no thumb down (he never stands still unless he brakes or someone is in the way). tuck: flat out, thumb pushed up. back: how fast he can shuffle back up the hill, thumb pulled right down. accel / brake: how quickly he picks up speed and loses it. grip: how much of the usual sideways snap he has (he carves). spray: how big the snow he throws up is. off: how far down the skis come off (past the finish arch: the boss is fought on foot).",
+ "ski": {
+  "cruise": 4.2,
+  "tuck": 9,
+  "back": 1.8,
+  "accel": 3.2,
+  "brake": 10,
+  "grip": 0.5,
+  "spray": 0.7,
+  "off": 634,
+  "offWord": "SKIS OFF!"
+ },
+ "_path": "The piste winds: straight for start metres, then legs of about leg metres (vary = how much they differ) heading turn radians right and left in turn, joined by curves of radius metres, then straight again from end (the finish). Keep scenery within radius metres of the middle.",
+ "path": {
+  "start": 46,
+  "leg": 44,
+  "vary": 0.4,
+  "turn": 0.38,
+  "radius": 42,
+  "end": 580
+ },
+ "_avalanches": "When the player reaches z, half the piste is marked and then buried from behind (ski.js; game.json avalanche). side: -1 left, 1 right, 0 = whichever half the player is on.",
+ "avalanches": [
+  {
+   "z": 170,
+   "side": 0
+  },
+  {
+   "z": 334,
+   "side": -1
+  },
+  {
+   "z": 498,
+   "side": 0
+  }
+ ],
+ "_rooms": "The stretches of the mountain, in order (slope.js builds each in its own manner; the name swings down on a sign). kind: summit | forest | park | village | lodge.",
+ "rooms": [
+  {
+   "z": 0,
+   "kind": "summit",
+   "name": "THE SUMMIT",
+   "note": "It is all downhill from here."
+  },
+  {
+   "z": 120,
+   "kind": "forest",
+   "name": "TIMBERLINE",
+   "note": "That snowman just moved."
+  },
+  {
+   "z": 270,
+   "kind": "park",
+   "name": "TERRAIN PARK",
+   "note": "Send it. Then slap it."
+  },
+  {
+   "z": 400,
+   "kind": "village",
+   "name": "FONDUE VILLAGE",
+   "note": "Mind the cheese."
+  },
+  {
+   "z": 584,
+   "kind": "lodge",
+   "name": "THE LODGE",
+   "note": "Something big is at the bar."
+  }
+ ],
+ "_hazards": "On the piste. ice = a sheet of ice: slippery like a wet floor (your skis skate; slap someone standing on it and they slide away and bowl over whoever is behind). ramp = a kicker (round; x0..x1 sets its size): ski up it to be thrown over whoever is in the way, landing with a shockwave. z = metres along, len = how long, x0..x1 = how far across (-1..1).",
+ "hazards": [
+  {
+   "kind": "ice",
+   "z": 60,
+   "len": 6,
+   "x0": -0.5,
+   "x1": 0.5
+  },
+  {
+   "kind": "ice",
+   "z": 148,
+   "len": 7,
+   "x0": 0,
+   "x1": 1
+  },
+  {
+   "kind": "ice",
+   "z": 198,
+   "len": 6,
+   "x0": -1,
+   "x1": -0.1
+  },
+  {
+   "kind": "ice",
+   "z": 244,
+   "len": 8,
+   "x0": -0.6,
+   "x1": 0.6
+  },
+  {
+   "kind": "ice",
+   "z": 306,
+   "len": 6,
+   "x0": 0.1,
+   "x1": 1
+  },
+  {
+   "kind": "ice",
+   "z": 352,
+   "len": 7,
+   "x0": -1,
+   "x1": 0
+  },
+  {
+   "kind": "ice",
+   "z": 428,
+   "len": 7,
+   "x0": -0.5,
+   "x1": 0.5
+  },
+  {
+   "kind": "ice",
+   "z": 470,
+   "len": 6,
+   "x0": 0,
+   "x1": 1
+  },
+  {
+   "kind": "ice",
+   "z": 512,
+   "len": 7,
+   "x0": -1,
+   "x1": -0.1
+  },
+  {
+   "kind": "ice",
+   "z": 544,
+   "len": 6,
+   "x0": -0.4,
+   "x1": 0.6
+  },
+  {
+   "kind": "ramp",
+   "z": 96,
+   "len": 2.9,
+   "x0": -0.66,
+   "x1": 0.06
+  },
+  {
+   "kind": "ramp",
+   "z": 226,
+   "len": 2.9,
+   "x0": 0.09,
+   "x1": 0.81
+  },
+  {
+   "kind": "ramp",
+   "z": 284,
+   "len": 2.9,
+   "x0": -0.36,
+   "x1": 0.36
+  },
+  {
+   "kind": "ramp",
+   "z": 366,
+   "len": 2.9,
+   "x0": -0.8,
+   "x1": -0.08
+  },
+  {
+   "kind": "ramp",
+   "z": 446,
+   "len": 2.9,
+   "x0": 0.1,
+   "x1": 0.82
+  },
+  {
+   "kind": "ramp",
+   "z": 530,
+   "len": 2.9,
+   "x0": -0.36,
+   "x1": 0.36
+  }
+ ],
+ "theme": {
+  "night": false,
+  "style": "slope",
+  "manholes": false,
+  "noSun": true,
+  "skyTop": "#2f7fe0",
+  "skyBottom": "#d6ecff",
+  "fog": "#e3f0fc",
+  "fogNear": 60,
+  "fogFar": 170,
+  "road": "#f6faff",
+  "roadLine": "#3d7bff",
+  "sidewalk": "#e9f1fb",
+  "curb": "#cfdff0",
+  "sun": "#fff6c4",
+  "lawn": "#e9f1fb",
+  "walls": [
+   "#8a5a2b",
+   "#7a4a22",
+   "#d9d2c2"
+  ],
+  "palette": [
+   "#e3122d",
+   "#ffd23f",
+   "#3d7bff",
+   "#3ddc97",
+   "#ff7b25",
+   "#ff3d7f",
+   "#b388ff"
+  ],
+  "hemiSky": "#ffffff",
+  "hemiGround": "#b9cde6",
+  "hemiIntensity": 1.5,
+  "sunIntensity": 1.6,
+  "props": []
+ },
+ "_spawns": "A spawn with \"jar\": \"snowman\" waits inside a snowman on the piste and bursts out when the player is close (game.json jars). Everyone without a ride of their own is on skis here.",
+ "spawns": [
+  {
+   "z": 22,
+   "type": "hater",
+   "x": 0.2,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 36,
+   "type": "snowballer",
+   "x": 0.5
+  },
+  {
+   "z": 46,
+   "type": "can",
+   "x": -0.6,
+   "formation": "column",
+   "count": 4
+  },
+  {
+   "z": 54,
+   "type": "boarder",
+   "x": -0.3
+  },
+  {
+   "z": 64,
+   "type": "hater",
+   "x": 0,
+   "formation": "cluster",
+   "count": 3
+  },
+  {
+   "z": 74,
+   "type": "heart",
+   "x": 0.6
+  },
+  {
+   "z": 82,
+   "type": "skibro",
+   "x": 0
+  },
+  {
+   "z": 92,
+   "type": "snowballer",
+   "x": -0.5
+  },
+  {
+   "z": 102,
+   "type": "boarder",
+   "x": 0,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 110,
+   "type": "suit",
+   "x": 0.4
+  },
+  {
+   "z": 116,
+   "type": "double",
+   "x": 0
+  },
+  {
+   "z": 126,
+   "type": "hater",
+   "x": -0.5,
+   "jar": "snowman"
+  },
+  {
+   "z": 130,
+   "type": "hater",
+   "x": 0.5,
+   "jar": "snowman"
+  },
+  {
+   "z": 140,
+   "type": "instructor",
+   "x": 0
+  },
+  {
+   "z": 152,
+   "type": "boarder",
+   "x": 0.4
+  },
+  {
+   "z": 160,
+   "type": "runner",
+   "x": -0.3,
+   "formation": "column",
+   "count": 2
+  },
+  {
+   "z": 168,
+   "type": "apres",
+   "x": -0.4
+  },
+  {
+   "z": 178,
+   "type": "heart",
+   "x": 0.5
+  },
+  {
+   "z": 186,
+   "type": "boarder",
+   "x": 0,
+   "jar": "snowman"
+  },
+  {
+   "z": 194,
+   "type": "skibro",
+   "x": 0.3
+  },
+  {
+   "z": 204,
+   "type": "snowballer",
+   "x": 0,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 214,
+   "type": "patrol",
+   "x": 0,
+   "scene": "elite_patrol"
+  },
+  {
+   "z": 222,
+   "type": "glove",
+   "x": 0
+  },
+  {
+   "z": 232,
+   "type": "hater",
+   "x": 0,
+   "formation": "cluster",
+   "count": 4
+  },
+  {
+   "z": 240,
+   "type": "apres",
+   "x": 0.5
+  },
+  {
+   "z": 248,
+   "type": "boarder",
+   "x": -0.4,
+   "formation": "column",
+   "count": 2
+  },
+  {
+   "z": 258,
+   "type": "hater",
+   "x": -0.3,
+   "jar": "snowman"
+  },
+  {
+   "z": 262,
+   "type": "hater",
+   "x": 0.4,
+   "jar": "snowman"
+  },
+  {
+   "z": 276,
+   "type": "boarder",
+   "x": 0,
+   "formation": "zigzag",
+   "count": 3
+  },
+  {
+   "z": 288,
+   "type": "snowballer",
+   "x": 0.5
+  },
+  {
+   "z": 294,
+   "type": "can",
+   "x": 0.6,
+   "formation": "column",
+   "count": 4
+  },
+  {
+   "z": 300,
+   "type": "skibro",
+   "x": -0.2
+  },
+  {
+   "z": 310,
+   "type": "instructor",
+   "x": 0.3
+  },
+  {
+   "z": 322,
+   "type": "boarder",
+   "x": 0,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 328,
+   "type": "heart",
+   "x": -0.5
+  },
+  {
+   "z": 340,
+   "type": "patrol",
+   "x": -0.3
+  },
+  {
+   "z": 346,
+   "type": "apres",
+   "x": 0.4
+  },
+  {
+   "z": 356,
+   "type": "bouncer",
+   "x": 0
+  },
+  {
+   "z": 360,
+   "type": "smash",
+   "x": 0
+  },
+  {
+   "z": 372,
+   "type": "boarder",
+   "x": 0,
+   "formation": "line",
+   "count": 3
+  },
+  {
+   "z": 380,
+   "type": "snowballer",
+   "x": -0.5
+  },
+  {
+   "z": 388,
+   "type": "skibro",
+   "x": 0.3
+  },
+  {
+   "z": 396,
+   "type": "runner",
+   "x": 0.3,
+   "formation": "column",
+   "count": 3
+  },
+  {
+   "z": 408,
+   "type": "apres",
+   "x": -0.4
+  },
+  {
+   "z": 414,
+   "type": "patrol",
+   "x": 0.3
+  },
+  {
+   "z": 424,
+   "type": "hater",
+   "x": 0,
+   "formation": "cluster",
+   "count": 4
+  },
+  {
+   "z": 434,
+   "type": "hyper",
+   "x": 0
+  },
+  {
+   "z": 440,
+   "type": "instructor",
+   "x": 0
+  },
+  {
+   "z": 452,
+   "type": "boarder",
+   "x": -0.3,
+   "formation": "column",
+   "count": 2
+  },
+  {
+   "z": 458,
+   "type": "snowballer",
+   "x": 0,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 466,
+   "type": "heart",
+   "x": 0.5
+  },
+  {
+   "z": 476,
+   "type": "skibro",
+   "x": 0
+  },
+  {
+   "z": 484,
+   "type": "hater",
+   "x": -0.5,
+   "jar": "snowman"
+  },
+  {
+   "z": 488,
+   "type": "boarder",
+   "x": 0.5,
+   "jar": "snowman"
+  },
+  {
+   "z": 494,
+   "type": "apres",
+   "x": 0.2
+  },
+  {
+   "z": 504,
+   "type": "patrol",
+   "x": -0.2
+  },
+  {
+   "z": 510,
+   "type": "buddy",
+   "x": 0
+  },
+  {
+   "z": 518,
+   "type": "boarder",
+   "x": 0,
+   "formation": "zigzag",
+   "count": 3
+  },
+  {
+   "z": 526,
+   "type": "skibro",
+   "x": 0.3
+  },
+  {
+   "z": 536,
+   "type": "snowballer",
+   "x": 0.5
+  },
+  {
+   "z": 540,
+   "type": "back",
+   "x": 0
+  },
+  {
+   "z": 548,
+   "type": "instructor",
+   "x": -0.3
+  },
+  {
+   "z": 556,
+   "type": "hater",
+   "x": 0,
+   "formation": "line",
+   "count": 3
+  },
+  {
+   "z": 576,
+   "type": "heart",
+   "x": 0.3
+  }
+ ],
+ "boss": {
+  "type": "yeti"
+ }
+}

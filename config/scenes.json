@@ -1,0 +1,1087 @@
+{
+  "_readme": [
+    "Every conversation in the game. Edit the text, save, and play the scene again: this file is re-read at each level start (in the browser no rebuild is needed; on the phone, use the tuning panel > scenes to edit lines live).",
+    "A scene is a list of beats. Each beat can have: shot, do, who + say, card, wait.",
+    "  who / say : speaker id and the line. Tap advances. Speaker ids: 'player', a cast id, or 'boss' / 'them' for the enemy that triggered the scene.",
+    "  shot      : 'kind:actor' - kinds: front, close, low, hands, over, wide, crowd, side (side also takes 'with': other actor).",
+    "  do        : { actor: action or [actions] }, '*' = every cast member.",
+    "              enemy actions : point, laugh, beckon, chicken, cower, stomp, yawn, idle, enter (step off the sidewalk), come (walk up to the player), flee, ko",
+    "              player actions: bare (plain hands), gloves (puts the slapping hands on), phone, look, shrug, point, vow, idle, slap:<actor>",
+    "  card      : big title text.   wait: seconds before a beat with no line moves on.",
+    "cast (optional): enemies placed for the scene only - x in metres across the street, z in metres ahead of the player, sidewalk: true to start them on the kerb.",
+    "When scenes play: 'intro' before the first level; 'intro_<levelId>' before any level; 'boss_<type>' when a boss wakes up; 'outro_<levelId>' after it falls;",
+    "a level spawn with \"scene\": \"name\" plays that scene when the enemy gets close (it is 'them').",
+    "play: 'always' | 'once' (per device) | 'never'."
+  ],
+  "speakers": {
+    "player": {
+      "name": "YOU",
+      "color": "#ffd23f",
+      "voice": {
+        "f": 210,
+        "type": "triangle"
+      }
+    }
+  },
+  "scenes": {
+    "intro": {
+      "play": "once",
+      "cast": [
+        {
+          "id": "h1",
+          "type": "hater",
+          "x": -1.3,
+          "z": 6.5,
+          "female": false
+        },
+        {
+          "id": "h2",
+          "type": "hater",
+          "x": 1.6,
+          "z": 7.6,
+          "female": true
+        },
+        {
+          "id": "s1",
+          "type": "suit",
+          "x": 0.2,
+          "z": 9.6,
+          "female": false
+        },
+        {
+          "id": "g1",
+          "type": "og",
+          "x": -2.4,
+          "z": 6.2,
+          "sidewalk": true
+        },
+        {
+          "id": "r1",
+          "type": "runner",
+          "x": 2.6,
+          "z": 8.4,
+          "sidewalk": true
+        }
+      ],
+      "beats": [
+        {
+          "shot": "front:player",
+          "do": {
+            "player": [
+              "bare",
+              "phone"
+            ]
+          },
+          "who": "player",
+          "say": "Headphones in. Snack secured. Just a nice, quiet on the creek walk..."
+        },
+        {
+          "shot": "crowd:player",
+          "do": {
+            "h1": "point",
+            "g1": "enter",
+            "r1": "enter"
+          },
+          "who": "h1",
+          "say": "HEY! Broccoli head! This is OUR street."
+        },
+        {
+          "shot": "front:s1",
+          "do": {
+            "s1": "beckon"
+          },
+          "who": "s1",
+          "say": "Walking here costs money, kid. Pay the toll."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "look"
+          },
+          "who": "player",
+          "say": "Every day. Every. Single. Day."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "look"
+          },
+          "who": "player",
+          "say": "Too bad for these bullies; I practice Power Slapping.. Competitively!"
+        },
+        {
+          "shot": "crowd:player",
+          "do": {
+            "*": "laugh"
+          },
+          "who": "h2",
+          "say": "Aww. What's he gonna do, cry about it?"
+        },
+        {
+          "shot": "hands:player",
+          "do": {
+            "player": "gloves",
+            "*": "idle"
+          },
+          "who": "player",
+          "say": "Nope. Hands on."
+        },
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "vow"
+          },
+          "who": "player",
+          "say": "I'm slapping my way through. ALL of you."
+        },
+        {
+          "shot": "side:player",
+          "with": "h1",
+          "do": {
+            "h1": "come",
+            "player": "idle"
+          },
+          "who": "h1",
+          "say": "Yeah? You and what arm--"
+        },
+        {
+          "shot": "side:player",
+          "with": "h1",
+          "do": {
+            "player": "slap:h1"
+          },
+          "wait": 0.95
+        },
+        {
+          "shot": "crowd:player",
+          "do": {
+            "*": "flee"
+          },
+          "card": "SLAP TIME!",
+          "wait": 1.3
+        }
+      ]
+    },
+    "elite_bouncer": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:them",
+          "do": {
+            "them": "point"
+          },
+          "who": "them",
+          "say": "You're not on the list."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "point"
+          },
+          "who": "player",
+          "say": "Check again. Under S. For slap."
+        }
+      ]
+    },
+    "boss_landlord": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:boss",
+          "do": {
+            "boss": "point"
+          },
+          "who": "boss",
+          "say": "You're three slaps behind on rent."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "vow"
+          },
+          "who": "player",
+          "say": "Here's my payment. In full."
+        }
+      ]
+    },
+    "outro_level1": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "vow"
+          },
+          "who": "player",
+          "say": "Rent's paid. Next block."
+        }
+      ]
+    },
+    "boss_critic": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:boss",
+          "do": {
+            "boss": "yawn"
+          },
+          "who": "boss",
+          "say": "Your technique is... derivative."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "point"
+          },
+          "who": "player",
+          "say": "Review THIS."
+        }
+      ]
+    },
+    "outro_level2": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "shrug"
+          },
+          "who": "player",
+          "say": "Five stars. Would slap again."
+        }
+      ]
+    },
+    "boss_topdog": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:boss",
+          "do": {
+            "boss": "beckon"
+          },
+          "who": "boss",
+          "say": "Nobody walks my boulevard for free."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "vow"
+          },
+          "who": "player",
+          "say": "Good thing I'm not walking. I'm slapping."
+        }
+      ]
+    },
+    "outro_level3": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "vow"
+          },
+          "who": "player",
+          "say": "Golden hour. Clear streets."
+        },
+        {
+          "shot": "front:player",
+          "do": {
+            "player": "look"
+          },
+          "who": "player",
+          "say": "...Who's next?"
+        }
+      ]
+    },
+    "boss_inspector": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:boss",
+          "do": {
+            "boss": "point"
+          },
+          "who": "boss",
+          "say": "Tickets, please. Yours expired upstairs."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "gloves"
+          },
+          "who": "player",
+          "say": "I have a season pass. It is in this hand."
+        }
+      ]
+    },
+    "outro_level4": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "shrug"
+          },
+          "who": "player",
+          "say": "Mind the gap. Between his ears."
+        }
+      ]
+    },
+    "boss_farmer": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:boss",
+          "do": {
+            "boss": "laugh"
+          },
+          "who": "boss",
+          "say": "City boy. Out here we slap with BOTH hands."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "vow"
+          },
+          "who": "player",
+          "say": "Then count mine."
+        }
+      ]
+    },
+    "boss_hothead": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:boss",
+          "do": {
+            "boss": "laugh"
+          },
+          "who": "boss",
+          "say": "You walked across MY floor. Now it slaps back."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "gloves"
+          },
+          "who": "player",
+          "say": "Then I will cool you down. One cheek at a time."
+        }
+      ]
+    },
+    "outro_level6": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "shrug"
+          },
+          "who": "player",
+          "say": "Hothead. Cold feet."
+        }
+      ]
+    },
+    "outro_level5": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "shrug"
+          },
+          "who": "player",
+          "say": "Reaped. Sowed. Slapped."
+        }
+      ]
+    },
+    "intro_level7": {
+      "play": "always",
+      "beats": [
+        {
+          "card": "SWEET HOME",
+          "wait": 1.4
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "look"
+          },
+          "who": "player",
+          "say": "Home. Finally. A cold drink, the couch, total silence."
+        },
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "shrug"
+          },
+          "who": "player",
+          "say": "...So why is the front door wide open?"
+        }
+      ]
+    },
+    "boss_houseguest": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:boss",
+          "do": {
+            "boss": "yawn"
+          },
+          "who": "boss",
+          "say": "Oh. You live here? Huh. Since when?"
+        },
+        {
+          "shot": "front:boss",
+          "do": {
+            "boss": "laugh"
+          },
+          "who": "boss",
+          "say": "I ate your leftovers. Changed the wifi. Your mail is in the toilet."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "gloves"
+          },
+          "who": "player",
+          "say": "Checkout time."
+        }
+      ]
+    },
+    "outro_level7": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "shrug"
+          },
+          "who": "player",
+          "say": "And take your slippers."
+        }
+      ]
+    },
+    "intro_level8": {
+      "play": "always",
+      "beats": [
+        {
+          "card": "ZIG ZAG CIRCUS",
+          "wait": 1.4
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "look"
+          },
+          "who": "player",
+          "say": "A circus. At dusk. On a road that can't make up its mind."
+        },
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "gloves"
+          },
+          "who": "player",
+          "say": "Fine. Left, right, slap."
+        }
+      ]
+    },
+    "boss_ringmaster": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:boss",
+          "do": {
+            "boss": "laugh"
+          },
+          "who": "boss",
+          "say": "LADIES AND GENTLEMEN! Tonight, for one night only..."
+        },
+        {
+          "shot": "front:boss",
+          "do": {
+            "boss": "point"
+          },
+          "who": "boss",
+          "say": "...a volunteer from the audience gets SLAPPED INTO NEXT WEEK!"
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "vow"
+          },
+          "who": "player",
+          "say": "Wrong volunteer."
+        }
+      ]
+    },
+    "outro_level8": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "shrug"
+          },
+          "who": "player",
+          "say": "And that's the show. Goodnight!"
+        }
+      ]
+    },
+    "intro_level9": {
+      "play": "always",
+      "beats": [
+        {
+          "card": "MALL OF SHAME",
+          "wait": 1.4
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "look"
+          },
+          "who": "player",
+          "say": "Muzak. Pretzels. Forty-one phone case kiosks."
+        },
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "gloves"
+          },
+          "who": "player",
+          "say": "I'm not here to shop."
+        }
+      ]
+    },
+    "elite_mallcop": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:them",
+          "do": {
+            "them": "point"
+          },
+          "who": "them",
+          "say": "HOLD IT. Slapping is not permitted on mall property."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "point"
+          },
+          "who": "player",
+          "say": "Is that a segway?"
+        },
+        {
+          "shot": "low:them",
+          "do": {
+            "them": "stomp"
+          },
+          "who": "them",
+          "say": "It's a PERSONAL PATROL VEHICLE."
+        }
+      ]
+    },
+    "boss_manager": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:boss",
+          "do": {
+            "boss": "point"
+          },
+          "who": "boss",
+          "say": "Sir. SIR. We've had complaints. Several hundred of them."
+        },
+        {
+          "shot": "front:boss",
+          "do": {
+            "boss": "laugh"
+          },
+          "who": "boss",
+          "say": "You're banned. From the mall. For LIFE."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "vow"
+          },
+          "who": "player",
+          "say": "I'd like to speak to the manager."
+        },
+        {
+          "shot": "low:boss",
+          "do": {
+            "boss": "stomp"
+          },
+          "who": "boss",
+          "say": "I AM the manager."
+        }
+      ]
+    },
+    "outro_level9": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "shrug"
+          },
+          "who": "player",
+          "say": "Leave a review? One star. Too many slaps."
+        }
+      ]
+    },
+    "intro_level10": {
+      "play": "always",
+      "beats": [
+        {
+          "card": "SLAPDASH",
+          "wait": 1.4
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "look"
+          },
+          "who": "player",
+          "say": "Washington. The bullies have taken the whole town."
+        },
+        {
+          "shot": "hands:player",
+          "do": {
+            "player": "phone"
+          },
+          "who": "player",
+          "say": "'By order of the Overruler: slapping is now ILLEGAL.'"
+        },
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "gloves"
+          },
+          "who": "player",
+          "say": "Then I'm about to break a LOT of laws."
+        }
+      ]
+    },
+    "elite_senator": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:them",
+          "do": {
+            "them": "point"
+          },
+          "who": "them",
+          "say": "Point of order! The gentleman with the hands is OUT of order!"
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "shrug"
+          },
+          "who": "player",
+          "say": "Is this going to take long?"
+        },
+        {
+          "shot": "front:them",
+          "do": {
+            "them": "laugh"
+          },
+          "who": "them",
+          "say": "I intend to speak for... eleven hours."
+        }
+      ]
+    },
+    "elite_agent": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:them",
+          "do": {
+            "them": "point"
+          },
+          "who": "them",
+          "say": "Halt. This road is closed for a motorcade."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "look"
+          },
+          "who": "player",
+          "say": "Whose motorcade?"
+        },
+        {
+          "shot": "low:them",
+          "do": {
+            "them": "stomp"
+          },
+          "who": "them",
+          "say": "That's classified."
+        }
+      ]
+    },
+    "elite_candidate": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:them",
+          "do": {
+            "them": "beckon"
+          },
+          "who": "them",
+          "say": "Hi there, friend! Can I count on your vote?"
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "look"
+          },
+          "who": "player",
+          "say": "Who are you running against?"
+        },
+        {
+          "shot": "front:them",
+          "do": {
+            "them": "laugh"
+          },
+          "who": "them",
+          "say": "Nobody! I outlawed the other candidates."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "vow"
+          },
+          "who": "player",
+          "say": "Then I'm voting with my hands."
+        },
+        {
+          "shot": "front:them",
+          "do": {
+            "them": "point"
+          },
+          "who": "them",
+          "say": "Every handshake is a vote. Leave me be and I win!"
+        }
+      ]
+    },
+    "boss_overruler": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:boss",
+          "do": {
+            "boss": "stomp"
+          },
+          "who": "boss",
+          "say": "ORDER! ORDER IN MY COURT!"
+        },
+        {
+          "shot": "front:boss",
+          "do": {
+            "boss": "laugh"
+          },
+          "who": "boss",
+          "say": "I have overruled the rules, the weekend, AND gravity."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "vow"
+          },
+          "who": "player",
+          "say": "Overrule THIS."
+        },
+        {
+          "shot": "low:boss",
+          "do": {
+            "boss": "point"
+          },
+          "who": "boss",
+          "say": "OBJECTION! ...Sustained. By me. Because I'm ME."
+        }
+      ]
+    },
+    "outro_level10": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "shrug"
+          },
+          "who": "player",
+          "say": "Court is adjourned. Permanently."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "point"
+          },
+          "who": "player",
+          "say": "Somebody stop that motorcade. It's been going round for an hour."
+        }
+      ]
+    },
+    "intro_level11": {
+      "play": "always",
+      "beats": [
+        {
+          "card": "1001 SLAPS",
+          "wait": 1.4
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "look"
+          },
+          "who": "player",
+          "say": "The night bazaar. Everything's for sale, and everybody's a bully."
+        },
+        {
+          "shot": "hands:player",
+          "do": {
+            "player": "phone"
+          },
+          "who": "player",
+          "say": "'The Sultan demands a slap for every night. Tonight is night one thousand and one.'"
+        },
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "gloves"
+          },
+          "who": "player",
+          "say": "Lucky for him, I deliver. And I count."
+        }
+      ]
+    },
+    "elite_genie": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:them",
+          "do": {
+            "them": "beckon"
+          },
+          "who": "them",
+          "say": "FREE! After a thousand years in that lamp! Three wishes!"
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "look"
+          },
+          "who": "player",
+          "say": "Great. I wish you'd get out of my way."
+        },
+        {
+          "shot": "front:them",
+          "do": {
+            "them": "laugh"
+          },
+          "who": "them",
+          "say": "Oh, the wishes are for ME. Wish one: you get slapped."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "vow"
+          },
+          "who": "player",
+          "say": "Funny. That was going to be MY wish."
+        }
+      ]
+    },
+    "boss_sultan": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:boss",
+          "do": {
+            "boss": "stomp"
+          },
+          "who": "boss",
+          "say": "WHO DARES SLAP IN MY BAZAAR?"
+        },
+        {
+          "shot": "front:boss",
+          "do": {
+            "boss": "laugh"
+          },
+          "who": "boss",
+          "say": "For a thousand nights they told me stories. I never once heard an ending."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "vow"
+          },
+          "who": "player",
+          "say": "Here's the ending. It's a slap."
+        },
+        {
+          "shot": "low:boss",
+          "do": {
+            "boss": "point"
+          },
+          "who": "boss",
+          "say": "GUARDS! Thieves! Anybody?! ...Fine. I shall strike oil, and you shall slip in it."
+        }
+      ]
+    },
+    "outro_level11": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "shrug"
+          },
+          "who": "player",
+          "say": "And they all lived slappily ever after."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "point"
+          },
+          "who": "player",
+          "say": "The end. ...Somebody put that genie back in the lamp."
+        }
+      ]
+    },
+    "intro_level12": {
+      "play": "always",
+      "beats": [
+        {
+          "card": "SLAPPERY SLOPE",
+          "wait": 1.4
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "look"
+          },
+          "who": "player",
+          "say": "Top of the mountain. Double black diamond. And every bully in town booked the same week."
+        },
+        {
+          "shot": "hands:player",
+          "do": {
+            "player": "phone"
+          },
+          "who": "player",
+          "say": "'Ski lessons: 9 am. Avalanche risk: yes. Yeti sightings: one.' ...One?"
+        },
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "gloves"
+          },
+          "who": "player",
+          "say": "I can't ski. But I can't stop either, so."
+        }
+      ]
+    },
+    "elite_patrol": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:them",
+          "do": {
+            "them": "point"
+          },
+          "who": "them",
+          "say": "Ski patrol! You're going too fast, too recklessly, and too... slappily."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "shrug"
+          },
+          "who": "player",
+          "say": "I don't know how to stop."
+        },
+        {
+          "shot": "front:them",
+          "do": {
+            "them": "laugh"
+          },
+          "who": "them",
+          "say": "Then I'll stop you. Hold still, this is a rescue."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "vow"
+          },
+          "who": "player",
+          "say": "Rescue THIS."
+        }
+      ]
+    },
+    "boss_yeti": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:boss",
+          "do": {
+            "boss": "stomp"
+          },
+          "who": "boss",
+          "say": "RRRAAAAGH!"
+        },
+        {
+          "shot": "front:boss",
+          "do": {
+            "boss": "laugh"
+          },
+          "who": "boss",
+          "say": "...Sorry. Force of habit. I OWN this mountain. Lift passes, fondue, the lot."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "vow"
+          },
+          "who": "player",
+          "say": "Then I'd like to speak to the manager. With my hand."
+        },
+        {
+          "shot": "low:boss",
+          "do": {
+            "boss": "point"
+          },
+          "who": "boss",
+          "say": "NOBODY SLAPS THE YETI. I'll put you on ICE!"
+        }
+      ]
+    },
+    "outro_level12": {
+      "play": "always",
+      "beats": [
+        {
+          "shot": "low:player",
+          "do": {
+            "player": "shrug"
+          },
+          "who": "player",
+          "say": "Abominable? He was barely annoying."
+        },
+        {
+          "shot": "close:player",
+          "do": {
+            "player": "point"
+          },
+          "who": "player",
+          "say": "Somebody get him a hot chocolate. And get me down off these skis."
+        }
+      ]
+    }
+  }
+}

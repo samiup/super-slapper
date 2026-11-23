@@ -1,0 +1,489 @@
+{
+ "id": "level8",
+ "name": "ZIG ZAG CIRCUS",
+ "subtitle": "Roll up, roll up. The road goes left, right, left - and so do you.",
+ "length": 600,
+ "runSpeedMult": 1.06,
+ "bpm": 132,
+ "music": "circus",
+ "rats": false,
+ "_path": "The track winds: straight for start metres, then legs of about leg metres (vary = how much they differ) heading turn radians right and left in turn, joined by curves of radius metres, then straight again from end (the Big Top). Keep scenery within radius metres of the middle.",
+ "path": {
+  "start": 36,
+  "leg": 34,
+  "vary": 0.35,
+  "turn": 0.5,
+  "radius": 30,
+  "end": 525
+ },
+ "_hazards": "On the track. tramp = a trampoline (round; x0..x1 sets its size): step on it to be thrown up and over, landing with a shockwave. cream = a custard pie splat: slap someone standing in it and they skid away and bowl over whoever is behind. lava = a fire-eater's burning coals. z = metres along, len = how long, x0..x1 = how far across (-1..1).",
+ "hazards": [
+  {
+   "kind": "tramp",
+   "z": 60,
+   "len": 2.9,
+   "x0": -0.66,
+   "x1": 0.06
+  },
+  {
+   "kind": "cream",
+   "z": 84,
+   "len": 7,
+   "x0": -0.4,
+   "x1": 0.6
+  },
+  {
+   "kind": "lava",
+   "z": 104,
+   "len": 5,
+   "x0": -1,
+   "x1": -0.35
+  },
+  {
+   "kind": "tramp",
+   "z": 126,
+   "len": 2.9,
+   "x0": 0.09,
+   "x1": 0.81
+  },
+  {
+   "kind": "cream",
+   "z": 150,
+   "len": 8,
+   "x0": -0.8,
+   "x1": 0.2
+  },
+  {
+   "kind": "lava",
+   "z": 170,
+   "len": 4,
+   "x0": 0.3,
+   "x1": 1
+  },
+  {
+   "kind": "tramp",
+   "z": 196,
+   "len": 2.9,
+   "x0": -0.86,
+   "x1": -0.14
+  },
+  {
+   "kind": "tramp",
+   "z": 212,
+   "len": 2.9,
+   "x0": 0.14,
+   "x1": 0.86
+  },
+  {
+   "kind": "cream",
+   "z": 236,
+   "len": 9,
+   "x0": -0.5,
+   "x1": 0.9
+  },
+  {
+   "kind": "lava",
+   "z": 262,
+   "len": 6,
+   "x0": -0.2,
+   "x1": 0.4
+  },
+  {
+   "kind": "tramp",
+   "z": 286,
+   "len": 2.9,
+   "x0": -0.36,
+   "x1": 0.36
+  },
+  {
+   "kind": "cream",
+   "z": 306,
+   "len": 6,
+   "x0": -1,
+   "x1": -0.1
+  },
+  {
+   "kind": "cream",
+   "z": 322,
+   "len": 6,
+   "x0": 0.1,
+   "x1": 1
+  },
+  {
+   "kind": "lava",
+   "z": 346,
+   "len": 5,
+   "x0": -1,
+   "x1": -0.4
+  },
+  {
+   "kind": "lava",
+   "z": 346,
+   "len": 5,
+   "x0": 0.4,
+   "x1": 1
+  },
+  {
+   "kind": "tramp",
+   "z": 366,
+   "len": 2.9,
+   "x0": -0.36,
+   "x1": 0.36
+  },
+  {
+   "kind": "cream",
+   "z": 392,
+   "len": 10,
+   "x0": -0.7,
+   "x1": 0.7
+  },
+  {
+   "kind": "tramp",
+   "z": 420,
+   "len": 2.9,
+   "x0": -0.81,
+   "x1": -0.09
+  },
+  {
+   "kind": "lava",
+   "z": 440,
+   "len": 5,
+   "x0": 0.1,
+   "x1": 0.8
+  },
+  {
+   "kind": "cream",
+   "z": 462,
+   "len": 8,
+   "x0": -0.9,
+   "x1": 0.3
+  },
+  {
+   "kind": "tramp",
+   "z": 490,
+   "len": 2.9,
+   "x0": -0.06,
+   "x1": 0.66
+  }
+ ],
+ "theme": {
+  "night": false,
+  "style": "circus",
+  "manholes": false,
+  "noSun": true,
+  "skyTop": "#2b1a5e",
+  "skyBottom": "#ff8a5c",
+  "fog": "#6a3d6e",
+  "fogNear": 48,
+  "fogFar": 140,
+  "road": "#d9a86a",
+  "roadLine": "#ffffff",
+  "sidewalk": "#9a6b3e",
+  "curb": "#e3122d",
+  "sun": "#ffd8a8",
+  "lawn": "#3f6a4a",
+  "walls": [
+   "#e3122d",
+   "#f7f2e7",
+   "#2f5f9e"
+  ],
+  "palette": [
+   "#ff3d7f",
+   "#ffd23f",
+   "#00d8ff",
+   "#3ddc97",
+   "#b388ff",
+   "#ff7b25",
+   "#f7f2e7"
+  ],
+  "hemiSky": "#ffe0f0",
+  "hemiGround": "#5a3a6e",
+  "hemiIntensity": 1.45,
+  "sunIntensity": 1.6,
+  "props": []
+ },
+ "boss": {
+  "type": "ringmaster"
+ },
+ "spawns": [
+  {
+   "z": 16,
+   "type": "hater",
+   "x": 0,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 28,
+   "type": "clown",
+   "x": 0.5
+  },
+  {
+   "z": 40,
+   "type": "heart",
+   "x": -0.5
+  },
+  {
+   "z": 46,
+   "type": "acrobat",
+   "x": -0.3
+  },
+  {
+   "z": 66,
+   "type": "hater",
+   "x": 0.2,
+   "formation": "cluster",
+   "count": 4
+  },
+  {
+   "z": 76,
+   "type": "juggler",
+   "x": -0.6
+  },
+  {
+   "z": 88,
+   "type": "suit",
+   "x": 0.1
+  },
+  {
+   "z": 92,
+   "type": "hater",
+   "x": 0.2,
+   "formation": "column",
+   "count": 3
+  },
+  {
+   "z": 110,
+   "type": "double",
+   "x": 0.4
+  },
+  {
+   "z": 114,
+   "type": "strongman",
+   "x": 0
+  },
+  {
+   "z": 122,
+   "type": "acrobat",
+   "x": -0.5
+  },
+  {
+   "z": 134,
+   "type": "clown",
+   "x": -0.6
+  },
+  {
+   "z": 140,
+   "type": "runner",
+   "x": 0.5,
+   "formation": "column",
+   "count": 2
+  },
+  {
+   "z": 154,
+   "type": "hater",
+   "x": -0.3,
+   "formation": "cluster",
+   "count": 4
+  },
+  {
+   "z": 160,
+   "type": "acrobat",
+   "x": 0.5
+  },
+  {
+   "z": 178,
+   "type": "og",
+   "x": 0
+  },
+  {
+   "z": 184,
+   "type": "heart",
+   "x": 0.6
+  },
+  {
+   "z": 200,
+   "type": "juggler",
+   "x": 0.7
+  },
+  {
+   "z": 214,
+   "type": "clown",
+   "x": -0.7,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 222,
+   "type": "smash",
+   "x": 0
+  },
+  {
+   "z": 226,
+   "type": "hater",
+   "x": 0.2,
+   "formation": "line",
+   "count": 3
+  },
+  {
+   "z": 238,
+   "type": "hater",
+   "x": 0.2,
+   "formation": "cluster",
+   "count": 5
+  },
+  {
+   "z": 248,
+   "type": "strongman",
+   "x": -0.2
+  },
+  {
+   "z": 270,
+   "type": "acrobat",
+   "x": 0,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 280,
+   "type": "mime",
+   "x": 0
+  },
+  {
+   "z": 294,
+   "type": "juggler",
+   "x": -0.5
+  },
+  {
+   "z": 300,
+   "type": "heart",
+   "x": 0.3
+  },
+  {
+   "z": 310,
+   "type": "hater",
+   "x": -0.6,
+   "formation": "column",
+   "count": 3
+  },
+  {
+   "z": 318,
+   "type": "juggler",
+   "x": 0.6
+  },
+  {
+   "z": 326,
+   "type": "hater",
+   "x": 0.6,
+   "formation": "column",
+   "count": 3
+  },
+  {
+   "z": 334,
+   "type": "clown",
+   "x": 0
+  },
+  {
+   "z": 352,
+   "type": "twin",
+   "x": 0,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 372,
+   "type": "strongman",
+   "x": 0.3
+  },
+  {
+   "z": 380,
+   "type": "hyper",
+   "x": 0
+  },
+  {
+   "z": 394,
+   "type": "hater",
+   "x": 0,
+   "formation": "cluster",
+   "count": 5
+  },
+  {
+   "z": 402,
+   "type": "clown",
+   "x": 0.6
+  },
+  {
+   "z": 410,
+   "type": "acrobat",
+   "x": -0.6
+  },
+  {
+   "z": 414,
+   "type": "strongman",
+   "x": 0.3
+  },
+  {
+   "z": 426,
+   "type": "juggler",
+   "x": 0.5
+  },
+  {
+   "z": 432,
+   "type": "heart",
+   "x": -0.4
+  },
+  {
+   "z": 446,
+   "type": "stripes",
+   "x": 0
+  },
+  {
+   "z": 464,
+   "type": "hater",
+   "x": -0.3,
+   "formation": "cluster",
+   "count": 4
+  },
+  {
+   "z": 470,
+   "type": "strongman",
+   "x": 0.5
+  },
+  {
+   "z": 478,
+   "type": "acrobat",
+   "x": -0.3,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 486,
+   "type": "clown",
+   "x": -0.5,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 496,
+   "type": "back",
+   "x": 0
+  },
+  {
+   "z": 506,
+   "type": "bouncer",
+   "x": 0.3
+  },
+  {
+   "z": 512,
+   "type": "acrobat",
+   "x": -0.4,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 520,
+   "type": "clown",
+   "x": 0.6
+  }
+ ]
+}

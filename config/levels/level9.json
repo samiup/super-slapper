@@ -1,0 +1,546 @@
+{
+ "id": "level9",
+ "name": "MALL OF SHAME",
+ "subtitle": "Attention shoppers: there is a slapper in aisle everything.",
+ "length": 600,
+ "runSpeedMult": 1.05,
+ "bpm": 116,
+ "music": "muzak",
+ "rats": false,
+ "_rooms": "The wings of the mall: a sign swings down with the name (and a PA announcement as the note) as the player walks in.",
+ "rooms": [
+  {
+   "z": 0,
+   "name": "WEST ENTRANCE",
+   "note": "Attention shoppers: a slapper is loose"
+  },
+  {
+   "z": 120,
+   "name": "FASHION WING",
+   "note": "Everything 50% off. Including your dignity."
+  },
+  {
+   "z": 250,
+   "name": "ELECTRONICS",
+   "note": "No, we will not price match."
+  },
+  {
+   "z": 360,
+   "name": "FOOD COURT",
+   "note": "Please do not slap the pretzels"
+  },
+  {
+   "z": 450,
+   "name": "LUXURY LANE",
+   "note": "If you have to ask, you can't afford it"
+  },
+  {
+   "z": 540,
+   "name": "GRAND ATRIUM",
+   "note": "The Manager will see you now"
+  }
+ ],
+ "_hazards": "On the floor. belt = a moving walkway: it carries anyone on it, dir 1 = onward, -1 = back toward the start (speed: game.json belt). wet = a mopped floor (a WET FLOOR sign is put out by it): slap someone standing in it and they skid away and bowl over whoever is behind. z = metres along, len = how long, x0..x1 = how far across (-1..1).",
+ "hazards": [
+  {
+   "kind": "belt",
+   "z": 70,
+   "len": 18,
+   "x0": -0.95,
+   "x1": -0.2,
+   "dir": 1
+  },
+  {
+   "kind": "belt",
+   "z": 70,
+   "len": 18,
+   "x0": 0.2,
+   "x1": 0.95,
+   "dir": -1
+  },
+  {
+   "kind": "wet",
+   "z": 104,
+   "len": 6,
+   "x0": -0.6,
+   "x1": 0.4
+  },
+  {
+   "kind": "wet",
+   "z": 160,
+   "len": 7,
+   "x0": 0.0,
+   "x1": 0.95
+  },
+  {
+   "kind": "belt",
+   "z": 190,
+   "len": 22,
+   "x0": -0.4,
+   "x1": 0.4,
+   "dir": -1
+  },
+  {
+   "kind": "wet",
+   "z": 232,
+   "len": 6,
+   "x0": -0.95,
+   "x1": -0.1
+  },
+  {
+   "kind": "belt",
+   "z": 270,
+   "len": 16,
+   "x0": -0.95,
+   "x1": -0.2,
+   "dir": -1
+  },
+  {
+   "kind": "belt",
+   "z": 270,
+   "len": 16,
+   "x0": 0.2,
+   "x1": 0.95,
+   "dir": 1
+  },
+  {
+   "kind": "wet",
+   "z": 318,
+   "len": 8,
+   "x0": -0.4,
+   "x1": 0.6
+  },
+  {
+   "kind": "wet",
+   "z": 378,
+   "len": 6,
+   "x0": -0.9,
+   "x1": 0.0
+  },
+  {
+   "kind": "wet",
+   "z": 400,
+   "len": 6,
+   "x0": 0.1,
+   "x1": 0.95
+  },
+  {
+   "kind": "belt",
+   "z": 440,
+   "len": 24,
+   "x0": -0.95,
+   "x1": -0.15,
+   "dir": 1
+  },
+  {
+   "kind": "belt",
+   "z": 440,
+   "len": 24,
+   "x0": 0.15,
+   "x1": 0.95,
+   "dir": 1
+  },
+  {
+   "kind": "wet",
+   "z": 484,
+   "len": 7,
+   "x0": -0.5,
+   "x1": 0.5
+  },
+  {
+   "kind": "belt",
+   "z": 508,
+   "len": 14,
+   "x0": -0.4,
+   "x1": 0.4,
+   "dir": -1
+  }
+ ],
+ "theme": {
+  "night": false,
+  "style": "mall",
+  "manholes": false,
+  "noSun": true,
+  "skyTop": "#9fd6ff",
+  "skyBottom": "#fff3e0",
+  "fog": "#f1e4d4",
+  "fogNear": 50,
+  "fogFar": 150,
+  "road": "#efe6d6",
+  "roadLine": "#d8cdb8",
+  "sidewalk": "#8a7a68",
+  "curb": "#c9c9d4",
+  "sun": "#ffffff",
+  "lawn": "#efe6d6",
+  "walls": [
+   "#efe6d6",
+   "#ff9ecb",
+   "#7fe3ff"
+  ],
+  "palette": [
+   "#ff3d7f",
+   "#ffd23f",
+   "#00d8ff",
+   "#3ddc97",
+   "#b388ff",
+   "#ff7b25",
+   "#f7f2e7"
+  ],
+  "hemiSky": "#fff6e8",
+  "hemiGround": "#c9b8a0",
+  "hemiIntensity": 1.6,
+  "sunIntensity": 1.2,
+  "props": []
+ },
+ "boss": {
+  "type": "manager"
+ },
+ "spawns": [
+  {
+   "z": 14,
+   "type": "hater",
+   "x": 0,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 26,
+   "type": "kiosk",
+   "x": 0.5
+  },
+  {
+   "z": 36,
+   "type": "can",
+   "x": -0.4
+  },
+  {
+   "z": 44,
+   "type": "walker",
+   "x": -0.2
+  },
+  {
+   "z": 56,
+   "type": "mannequin",
+   "x": 0.6,
+   "side": 1
+  },
+  {
+   "z": 64,
+   "type": "hater",
+   "x": 0,
+   "formation": "cluster",
+   "count": 3
+  },
+  {
+   "z": 80,
+   "type": "mallcop",
+   "x": 0.1,
+   "scene": "elite_mallcop"
+  },
+  {
+   "z": 92,
+   "type": "heart",
+   "x": 0.5
+  },
+  {
+   "z": 100,
+   "type": "shopaholic",
+   "x": -0.3
+  },
+  {
+   "z": 112,
+   "type": "mannequin",
+   "x": -0.6,
+   "side": -1
+  },
+  {
+   "z": 116,
+   "type": "mannequin",
+   "x": 0.6,
+   "side": 1
+  },
+  {
+   "z": 128,
+   "type": "walker",
+   "x": 0.4,
+   "formation": "column",
+   "count": 2
+  },
+  {
+   "z": 134,
+   "type": "mannequin",
+   "x": 0.6
+  },
+  {
+   "z": 140,
+   "type": "double",
+   "x": 0
+  },
+  {
+   "z": 148,
+   "type": "kiosk",
+   "x": -0.6
+  },
+  {
+   "z": 152,
+   "type": "runner",
+   "x": 0.5,
+   "formation": "column",
+   "count": 2
+  },
+  {
+   "z": 166,
+   "type": "suit",
+   "x": 0
+  },
+  {
+   "z": 176,
+   "type": "shopaholic",
+   "x": 0.4
+  },
+  {
+   "z": 182,
+   "type": "heart",
+   "x": -0.6
+  },
+  {
+   "z": 186,
+   "type": "hater",
+   "x": -0.2,
+   "formation": "cluster",
+   "count": 4
+  },
+  {
+   "z": 198,
+   "type": "mannequin",
+   "x": -0.6,
+   "side": -1
+  },
+  {
+   "z": 204,
+   "type": "shopaholic",
+   "x": -0.5
+  },
+  {
+   "z": 206,
+   "type": "noodle",
+   "x": 0.3
+  },
+  {
+   "z": 214,
+   "type": "mallcop",
+   "x": -0.3
+  },
+  {
+   "z": 226,
+   "type": "walker",
+   "x": 0,
+   "formation": "line",
+   "count": 3
+  },
+  {
+   "z": 240,
+   "type": "kiosk",
+   "x": 0.6
+  },
+  {
+   "z": 246,
+   "type": "kiosk",
+   "x": -0.6
+  },
+  {
+   "z": 252,
+   "type": "walker",
+   "x": 0.5,
+   "formation": "column",
+   "count": 2
+  },
+  {
+   "z": 258,
+   "type": "heart",
+   "x": 0
+  },
+  {
+   "z": 266,
+   "type": "shopaholic",
+   "x": 0,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 280,
+   "type": "mannequin",
+   "x": 0.6,
+   "side": 1
+  },
+  {
+   "z": 282,
+   "type": "mannequin",
+   "x": -0.6,
+   "side": -1
+  },
+  {
+   "z": 290,
+   "type": "smash",
+   "x": 0
+  },
+  {
+   "z": 298,
+   "type": "mallcop",
+   "x": 0.3,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 314,
+   "type": "runner",
+   "x": 0,
+   "formation": "zigzag",
+   "count": 3
+  },
+  {
+   "z": 328,
+   "type": "walker",
+   "x": -0.4
+  },
+  {
+   "z": 336,
+   "type": "buddy",
+   "x": 0.4
+  },
+  {
+   "z": 344,
+   "type": "hater",
+   "x": 0.2,
+   "formation": "cluster",
+   "count": 5
+  },
+  {
+   "z": 356,
+   "type": "mannequin",
+   "x": 0,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 366,
+   "type": "kiosk",
+   "x": 0.5
+  },
+  {
+   "z": 372,
+   "type": "walker",
+   "x": -0.3,
+   "formation": "column",
+   "count": 3
+  },
+  {
+   "z": 386,
+   "type": "heart",
+   "x": -0.5
+  },
+  {
+   "z": 392,
+   "type": "shopaholic",
+   "x": 0.2
+  },
+  {
+   "z": 404,
+   "type": "mannequin",
+   "x": -0.6,
+   "side": -1
+  },
+  {
+   "z": 410,
+   "type": "kiosk",
+   "x": -0.5
+  },
+  {
+   "z": 418,
+   "type": "hyper",
+   "x": 0
+  },
+  {
+   "z": 426,
+   "type": "mallcop",
+   "x": 0,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 436,
+   "type": "kiosk",
+   "x": -0.6
+  },
+  {
+   "z": 444,
+   "type": "bouncer",
+   "x": 0
+  },
+  {
+   "z": 452,
+   "type": "heart",
+   "x": 0.5
+  },
+  {
+   "z": 456,
+   "type": "shopaholic",
+   "x": -0.4
+  },
+  {
+   "z": 462,
+   "type": "mannequin",
+   "x": 0.6,
+   "side": 1
+  },
+  {
+   "z": 470,
+   "type": "walker",
+   "x": 0.3,
+   "formation": "line",
+   "count": 3
+  },
+  {
+   "z": 480,
+   "type": "glove",
+   "x": 0
+  },
+  {
+   "z": 490,
+   "type": "kiosk",
+   "x": 0.6
+  },
+  {
+   "z": 494,
+   "type": "kiosk",
+   "x": -0.6
+  },
+  {
+   "z": 504,
+   "type": "mallcop",
+   "x": -0.2
+  },
+  {
+   "z": 512,
+   "type": "hater",
+   "x": 0,
+   "formation": "wall",
+   "count": 5
+  },
+  {
+   "z": 520,
+   "type": "shopaholic",
+   "x": 0.4
+  },
+  {
+   "z": 522,
+   "type": "heart",
+   "x": 0.3
+  },
+  {
+   "z": 530,
+   "type": "back",
+   "x": -0.3
+  }
+ ]
+}

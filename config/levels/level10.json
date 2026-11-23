@@ -1,0 +1,591 @@
+{
+ "id": "level10",
+ "name": "SLAPDASH",
+ "subtitle": "The bullies have taken the capital. New law: no slapping. Break it.",
+ "length": 620,
+ "runSpeedMult": 1.05,
+ "bpm": 112,
+ "music": "march",
+ "rats": false,
+ "_path": "The avenue weaves: straight for start metres, then legs of about leg metres (vary = how much they differ) heading turn radians right and left in turn, joined by curves of radius metres, then straight again from end (up to the Hall of Overruling). Keep scenery within radius metres of the middle.",
+ "path": {
+  "start": 40,
+  "leg": 44,
+  "vary": 0.3,
+  "turn": 0.42,
+  "radius": 40,
+  "end": 545
+ },
+ "_crossroads": "Cross streets (dc.js builds them, motorcade.js runs the lights and the motorcade). z = metres along where the crossroads starts (it is crossWidth metres long); name = the street sign. Each one must sit on a straight stretch of the path, with about 17 m to spare either side: with this path that is 135-183, 293-341 and 375-424.",
+ "crossWidth": 14,
+ "crossroads": [
+  {
+   "z": 152,
+   "name": "K ST NW"
+  },
+  {
+   "z": 310,
+   "name": "LOOPHOLE AVE"
+  },
+  {
+   "z": 393,
+   "name": "FILIBUSTER ST"
+  }
+ ],
+ "_rallies": "Protesters on the sidewalk (dc.js builds them, rally.js runs them): [z, side] with side -1 left, 1 right. Each crowd is about 10 m long; keep them off the crossroads.",
+ "rallies": [
+  [
+   34,
+   1
+  ],
+  [
+   98,
+   -1
+  ],
+  [
+   200,
+   1
+  ],
+  [
+   246,
+   -1
+  ],
+  [
+   352,
+   1
+  ],
+  [
+   446,
+   -1
+  ],
+  [
+   500,
+   1
+  ],
+  [
+   560,
+   -1
+  ]
+ ],
+ "_rooms": "The districts: a sign swings down with the name (and a note) as the player walks in.",
+ "rooms": [
+  {
+   "z": 0,
+   "name": "PENNSLAPVANIA AVE",
+   "note": "The bullies have taken the capital"
+  },
+  {
+   "z": 110,
+   "name": "K STREET",
+   "note": "Lobbyists. Lobbyists everywhere."
+  },
+  {
+   "z": 220,
+   "name": "THE NATIONAL MALL",
+   "note": "Not that kind of mall. Please stop."
+  },
+  {
+   "z": 296,
+   "name": "FOGGY BOTTOM",
+   "note": "Visibility: poor. Ethics: poorer."
+  },
+  {
+   "z": 380,
+   "name": "JUDICIARY SQUARE",
+   "note": "Court is in session. You are the defendant."
+  },
+  {
+   "z": 520,
+   "name": "CAPITOL HILL",
+   "note": "The Overruler will see you now"
+  }
+ ],
+ "_hazards": "On the road. tape = a tangle of red tape and paperwork: slow going and slow steering for the player while on it (game.json tape); the bullies walk straight through. z = metres along, len = how long, x0..x1 = how far across (-1..1).",
+ "hazards": [
+  {
+   "kind": "tape",
+   "z": 62,
+   "len": 5,
+   "x0": -0.9,
+   "x1": 0.1
+  },
+  {
+   "kind": "tape",
+   "z": 118,
+   "len": 6,
+   "x0": -0.2,
+   "x1": 0.9
+  },
+  {
+   "kind": "tape",
+   "z": 200,
+   "len": 5,
+   "x0": -1,
+   "x1": -0.1
+  },
+  {
+   "kind": "tape",
+   "z": 240,
+   "len": 7,
+   "x0": -0.5,
+   "x1": 0.6
+  },
+  {
+   "kind": "tape",
+   "z": 286,
+   "len": 5,
+   "x0": 0,
+   "x1": 1
+  },
+  {
+   "kind": "tape",
+   "z": 345,
+   "len": 6,
+   "x0": -0.9,
+   "x1": 0.2
+  },
+  {
+   "kind": "tape",
+   "z": 432,
+   "len": 6,
+   "x0": -0.3,
+   "x1": 0.8
+  },
+  {
+   "kind": "tape",
+   "z": 470,
+   "len": 5,
+   "x0": -1,
+   "x1": -0.1
+  },
+  {
+   "kind": "tape",
+   "z": 506,
+   "len": 7,
+   "x0": -0.6,
+   "x1": 0.6
+  }
+ ],
+ "theme": {
+  "night": false,
+  "style": "dc",
+  "manholes": false,
+  "noSun": false,
+  "skyTop": "#5aa8f5",
+  "skyBottom": "#e6f3ff",
+  "fog": "#d8e8f5",
+  "fogNear": 60,
+  "fogFar": 175,
+  "road": "#3b3d44",
+  "roadLine": "#f2efe6",
+  "sidewalk": "#d6d0c4",
+  "curb": "#9a9a9e",
+  "sun": "#fff6d8",
+  "lawn": "#6fae5a",
+  "walls": [
+   "#f4efe4",
+   "#d9cdb4",
+   "#b5543c"
+  ],
+  "palette": [
+   "#c8102e",
+   "#ffd23f",
+   "#3d7bff",
+   "#ff9ec4",
+   "#3ddc97",
+   "#15243f",
+   "#f7f2e7"
+  ],
+  "hemiSky": "#f2f7ff",
+  "hemiGround": "#9fb38a",
+  "hemiIntensity": 1.5,
+  "sunIntensity": 1.3,
+  "props": []
+ },
+ "spawns": [
+  {
+   "z": 14,
+   "type": "hater",
+   "x": 0,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 24,
+   "type": "intern",
+   "x": -0.4
+  },
+  {
+   "z": 30,
+   "type": "intern",
+   "x": 0.4
+  },
+  {
+   "z": 40,
+   "type": "bureaucrat",
+   "x": 0.5
+  },
+  {
+   "z": 50,
+   "type": "can",
+   "x": -0.3
+  },
+  {
+   "z": 58,
+   "type": "senator",
+   "x": 0,
+   "scene": "elite_senator"
+  },
+  {
+   "z": 64,
+   "type": "canvasser",
+   "x": 0.5
+  },
+  {
+   "z": 74,
+   "type": "intern",
+   "x": 0,
+   "formation": "cluster",
+   "count": 3
+  },
+  {
+   "z": 86,
+   "type": "lobbyist",
+   "x": -0.3
+  },
+  {
+   "z": 92,
+   "type": "candidate",
+   "x": 0,
+   "scene": "elite_candidate"
+  },
+  {
+   "z": 96,
+   "type": "heart",
+   "x": 0.5
+  },
+  {
+   "z": 100,
+   "type": "judge",
+   "x": 0.4
+  },
+  {
+   "z": 110,
+   "type": "spin",
+   "x": -0.2
+  },
+  {
+   "z": 122,
+   "type": "suit",
+   "x": 0.3,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 132,
+   "type": "intern",
+   "x": -0.5,
+   "side": -1
+  },
+  {
+   "z": 138,
+   "type": "bureaucrat",
+   "x": -0.5
+  },
+  {
+   "z": 144,
+   "type": "glove",
+   "x": 0
+  },
+  {
+   "z": 170,
+   "type": "intern",
+   "x": 0.2,
+   "formation": "column",
+   "count": 2
+  },
+  {
+   "z": 174,
+   "type": "lobbyist",
+   "x": -0.2
+  },
+  {
+   "z": 180,
+   "type": "agent",
+   "x": -0.3,
+   "scene": "elite_agent"
+  },
+  {
+   "z": 190,
+   "type": "judge",
+   "x": -0.5
+  },
+  {
+   "z": 198,
+   "type": "candidate",
+   "x": -0.2
+  },
+  {
+   "z": 206,
+   "type": "senator",
+   "x": 0.2
+  },
+  {
+   "z": 214,
+   "type": "spin",
+   "x": 0.4
+  },
+  {
+   "z": 222,
+   "type": "heart",
+   "x": -0.4
+  },
+  {
+   "z": 228,
+   "type": "hater",
+   "x": 0,
+   "formation": "cluster",
+   "count": 3
+  },
+  {
+   "z": 238,
+   "type": "bureaucrat",
+   "x": 0.6
+  },
+  {
+   "z": 244,
+   "type": "canvasser",
+   "x": -0.5
+  },
+  {
+   "z": 246,
+   "type": "double",
+   "x": 0
+  },
+  {
+   "z": 252,
+   "type": "lobbyist",
+   "x": -0.4
+  },
+  {
+   "z": 258,
+   "type": "candidate",
+   "x": 0.3
+  },
+  {
+   "z": 262,
+   "type": "intern",
+   "x": 0,
+   "formation": "line",
+   "count": 3
+  },
+  {
+   "z": 272,
+   "type": "agent",
+   "x": 0.3
+  },
+  {
+   "z": 282,
+   "type": "judge",
+   "x": -0.6
+  },
+  {
+   "z": 290,
+   "type": "spin",
+   "x": 0
+  },
+  {
+   "z": 300,
+   "type": "can",
+   "x": 0.4
+  },
+  {
+   "z": 306,
+   "type": "heart",
+   "x": -0.5
+  },
+  {
+   "z": 328,
+   "type": "senator",
+   "x": 0
+  },
+  {
+   "z": 338,
+   "type": "lobbyist",
+   "x": 0.4
+  },
+  {
+   "z": 342,
+   "type": "canvasser",
+   "x": -0.6
+  },
+  {
+   "z": 352,
+   "type": "candidate",
+   "x": 0.2
+  },
+  {
+   "z": 356,
+   "type": "noodle",
+   "x": 0
+  },
+  {
+   "z": 362,
+   "type": "agent",
+   "x": 0,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 372,
+   "type": "heart",
+   "x": 0.5
+  },
+  {
+   "z": 376,
+   "type": "judge",
+   "x": 0.6
+  },
+  {
+   "z": 384,
+   "type": "spin",
+   "x": -0.3
+  },
+  {
+   "z": 412,
+   "type": "intern",
+   "x": 0,
+   "formation": "cluster",
+   "count": 3
+  },
+  {
+   "z": 420,
+   "type": "senator",
+   "x": -0.2
+  },
+  {
+   "z": 430,
+   "type": "lobbyist",
+   "x": 0.3
+  },
+  {
+   "z": 436,
+   "type": "heart",
+   "x": 0.4
+  },
+  {
+   "z": 446,
+   "type": "smash",
+   "x": 0
+  },
+  {
+   "z": 452,
+   "type": "judge",
+   "x": -0.5
+  },
+  {
+   "z": 456,
+   "type": "candidate",
+   "x": -0.3
+  },
+  {
+   "z": 460,
+   "type": "agent",
+   "x": 0.2
+  },
+  {
+   "z": 468,
+   "type": "spin",
+   "x": -0.4
+  },
+  {
+   "z": 476,
+   "type": "hyper",
+   "x": 0
+  },
+  {
+   "z": 484,
+   "type": "senator",
+   "x": 0.3
+  },
+  {
+   "z": 492,
+   "type": "intern",
+   "x": -0.3,
+   "formation": "column",
+   "count": 2
+  },
+  {
+   "z": 496,
+   "type": "canvasser",
+   "x": 0.5
+  },
+  {
+   "z": 500,
+   "type": "lobbyist",
+   "x": -0.2
+  },
+  {
+   "z": 508,
+   "type": "heart",
+   "x": 0.4
+  },
+  {
+   "z": 514,
+   "type": "bureaucrat",
+   "x": 0.5
+  },
+  {
+   "z": 520,
+   "type": "judge",
+   "x": -0.5
+  },
+  {
+   "z": 524,
+   "type": "candidate",
+   "x": 0.3
+  },
+  {
+   "z": 528,
+   "type": "agent",
+   "x": 0,
+   "formation": "line",
+   "count": 2
+  },
+  {
+   "z": 534,
+   "type": "buddy",
+   "x": 0
+  },
+  {
+   "z": 542,
+   "type": "senator",
+   "x": 0
+  },
+  {
+   "z": 550,
+   "type": "intern",
+   "x": 0,
+   "formation": "cluster",
+   "count": 2
+  },
+  {
+   "z": 556,
+   "type": "back",
+   "x": 0
+  },
+  {
+   "z": 562,
+   "type": "spin",
+   "x": 0.3
+  },
+  {
+   "z": 572,
+   "type": "heart",
+   "x": -0.3
+  }
+ ],
+ "boss": {
+  "type": "overruler"
+ }
+}
